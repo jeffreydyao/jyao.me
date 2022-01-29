@@ -23,12 +23,12 @@ const Home: NextPage = () => {
         </header>
 
         <main>
-          <div class="relative mt-12"> {/* Check if there's a better way to align elements */}
+          <div className="relative mt-12"> {/* Check if there's a better way to align elements */}
             <h2 className="text-neutral-50 text-sm absolute left-[-4rem] top-0">Now</h2>
             <p className="text-neutral-50 text-sm">Settling into CS, building things for fun and exploring Sydney more! -&gt; </p>
           </div>
 
-          <div class="relative mt-16"> {/* Check if there's a better way to align elements */}
+          <div className="relative mt-16"> {/* Check if there's a better way to align elements */}
             <h2 className="text-neutral-50 text-sm absolute left-[-5.5rem] top-0">Projects</h2>
             <div className="flex flex-col ">
               <Image
