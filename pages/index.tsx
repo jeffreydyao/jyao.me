@@ -4,6 +4,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import SocialIcons from '../components/SocialIcons'
 import listeningTo from '../public/listeningto.png'
+import Link from 'next/link'
 
 const Home: NextPage = () => {
   return (
@@ -25,7 +26,9 @@ const Home: NextPage = () => {
         <main>
           <div className="relative mt-12"> {/* Check if there's a better way to align elements */}
             <h2 className="text-neutral-50 text-sm absolute left-[-4rem] top-0">Now</h2>
-            <p className="text-neutral-50 text-sm">Settling into CS, building things for fun and exploring Sydney more! -&gt; </p>
+            <Link href="/now" passHref>
+              <p className="text-neutral-50 text-sm hover:text-blue-300 hover:cursor-pointer transition-all duration-[100]">Settling into CS, building things for fun and exploring Sydney more! -&gt; </p>
+            </Link>
           </div>
 
           <div className="relative mt-16"> {/* Check if there's a better way to align elements */}
@@ -47,8 +50,8 @@ const Home: NextPage = () => {
                 </div>
                 <div className="flex flex-col gap-2">
                   <div className="border-t-2 w-8 border-neutral-600" />
-                  <a href="https://listening-to.vercel.app" className="text-neutral-100 text-xs pt-1">Check it out -&gt;</a>
-                  <a href="https://github.com/jeffreydyao/listening-to-v2" className="text-neutral-100 text-xs">GitHub -&gt;</a> {/* Update once finished */}
+                  <a href="https://listening-to.vercel.app" className="text-neutral-100 text-xs pt-1 hover:text-blue-300 hover:cursor-pointer transition-all duration-[100]">Check it out -&gt;</a>
+                  <a href="https://github.com/jeffreydyao/listening-to-v2" className="text-neutral-100 text-xs hover:text-blue-300 hover:cursor-pointer transition-all duration-[100]">GitHub -&gt;</a> {/* Update once finished */}
 
                 </div>
 
