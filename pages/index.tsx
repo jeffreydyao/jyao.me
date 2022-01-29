@@ -52,7 +52,6 @@ const Home: NextPage = () => {
                   <div className="border-t-2 w-8 border-neutral-600" />
                   <a href="https://listening-to.vercel.app" className="text-neutral-100 text-xs pt-1 hover:text-blue-300 hover:cursor-pointer transition-all duration-[100]">Check it out -&gt;</a>
                   <a href="https://github.com/jeffreydyao/listening-to-v2" className="text-neutral-100 text-xs hover:text-blue-300 hover:cursor-pointer transition-all duration-[100]">GitHub -&gt;</a> {/* Update once finished */}
-
                 </div>
 
 
