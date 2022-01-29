@@ -8,14 +8,14 @@ import Link from 'next/link'
 
 const Home: NextPage = () => {
   return (
-    <div className="bg-neutral-900 min-h-screen flex flex-col items-center">
+    <div className="bg-neutral-900 min-h-screen flex flex-col items-center md:px-0 px-6">
       <Head>
         <title>Now · Jeffrey Yao</title>
         <meta name="description" content="What I'm doing now" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="items-start mt-24">
+      <div className="items-start md:mt-24 mt-8">
         <header className="flex flex-col justify-start ">
           <h1 className="text-md text-neutral-50 font-semibold">Jeffrey Yao</h1>
           <p className="text-neutral-400 text-sm pt-2">First-year Computer Science student · UNSW · Sydney</p>
@@ -24,9 +24,9 @@ const Home: NextPage = () => {
         </header>
 
         <main>
-          <div className="relative mt-12"> {/* Check if there's a better way to align elements */}
+          <div className="md:relative mt-12">
             <Link href="/" passHref>
-              <h2 className="text-neutral-50 text-sm absolute left-[-5.1rem] top-0 hover:text-blue-300 hover:cursor-pointer transition-all duration-[100]">&lt;- Now</h2>
+              <h2 className="text-neutral-50 text-sm md:absolute md:left-[-5.1rem] pb-2 md:top-0 hover:text-blue-300 hover:cursor-pointer transition-all duration-[100] font-medium">&lt;- Now</h2>
             </Link>
             <p className="text-neutral-400 text-sm">Last updated January 28th, 2022, from Sydney.</p>
             <h3 className="text-neutral-50 text-md font-semibold pt-6">Considering the direction of my career</h3>
