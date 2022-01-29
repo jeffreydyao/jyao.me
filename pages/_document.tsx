@@ -25,7 +25,11 @@ class Document extends NextDocument<Props> {
           `,
             }}
           />
-          <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+          <link
+            rel="preload"
+            href="https://rsms.me/inter/inter.css"
+            as="font"
+          />
         </Head>
         <body>
           <Main />
