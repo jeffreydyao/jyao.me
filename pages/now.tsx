@@ -15,7 +15,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="items-start md:mt-24 mt-8">
+      <div className="items-start md:mt-24 mt-8 mb-8">
         <header className="flex flex-col justify-start ">
           <h1 className="text-md text-neutral-50 font-semibold">Jeffrey Yao</h1>
           <p className="text-neutral-400 text-sm pt-2">
