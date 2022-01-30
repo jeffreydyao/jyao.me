@@ -31,8 +31,8 @@ const Home: NextPage = () => {
         <main>
           <div className="md:relative mt-12">
             <Link href="/" passHref>
-              <h2 className="text-neutral-50 text-sm md:absolute md:left-[-5.1rem] pb-2 md:top-0 hover:text-blue-300 hover:cursor-pointer transition-all duration-[100] font-medium">
-                &lt;- Now
+              <h2 className="text-neutral-50 text-sm md:absolute md:left-[-5.025rem] pb-2 md:top-0 hover:text-blue-300 hover:cursor-pointer transition-all duration-[100] font-medium">
+              ← Now
               </h2>
             </Link>
             <p className="text-neutral-400 text-sm">

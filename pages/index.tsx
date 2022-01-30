@@ -38,8 +38,8 @@ const Home: NextPage = () => {
             </h2>
             <Link href="/now" passHref>
               <p className="text-neutral-50 text-sm hover:text-blue-300 hover:cursor-pointer transition-all duration-[100]">
-                Settling into CS, building things for fun and exploring Sydney
-                more! -&gt;{" "}
+                Settling into CS, building things for fun and exploring Sydney 
+                more! →
               </p>
             </Link>
           </div>
@@ -81,14 +81,14 @@ const Home: NextPage = () => {
                       href="https://listening-to.vercel.app"
                       className="text-neutral-100 text-xs md:pt-1 hover:text-blue-300 hover:cursor-pointer transition-all duration-[100]"
                     >
-                      Check it out -&gt;
+                      Check it out →
                     </a>
                     <a
                       href="https://github.com/jeffreydyao/listening-to-v2"
                       className="text-neutral-100 text-xs hover:text-blue-300 hover:cursor-pointer transition-all duration-[100]"
                     >
-                      GitHub -&gt;
-                    </a>{" "}
+                      GitHub →
+                    </a>
                     {/* Update once finished */}
                   </div>
                 </div>
