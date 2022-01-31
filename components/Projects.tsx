@@ -38,19 +38,22 @@ export default function Projects() {
       <h2 className="text-neutral-50 text-sm md:absolute md:left-[-5.55rem] md:top-0 pb-7 font-medium">
         Projects
       </h2>
-      
+
       <div className="flex flex-col">
-      {projects.map(
-        ({ name, date, image, alt, description, builtwith, link, github }, i) => (
+        {projects.map(
+          (
+            { name, date, image, alt, description, builtwith, link, github },
+            i
+          ) => (
             <div key={`${i}`}>
               <div>
-              <Image
-                src={image}
-                alt={alt}
-                width={500}
-                height={220}
-                className="rounded-[0.875rem]"
-              />
+                <Image
+                  src={image}
+                  alt={alt}
+                  width={500}
+                  height={220}
+                  className="rounded-[0.875rem]"
+                />
               </div>
 
               <h3 className="text-neutral-50 text-base md:pt-9 pt-7">{name}</h3>
@@ -84,10 +87,8 @@ export default function Projects() {
                 </div>
               </div>
             </div>
-          
-
-        )
-      )}
+          )
+        )}
       </div>
     </Block>
   );

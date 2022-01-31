@@ -4,10 +4,15 @@ import listeningTo from "../public/listeningto.png";
 import Link from "next/link";
 import Layout from "../components/Layout";
 import Projects from "../components/Projects";
+import { CMS_NAME } from "../lib/constants";
+import Head from "next/head";
 
 const Home: NextPage = () => {
   return (
     <Layout>
+      <Head>
+        <title>{CMS_NAME}</title>
+      </Head>
       <div className="md:relative mt-12 transition-all duration-[100]">
         <h2 className="text-neutral-50 text-sm md:absolute md:left-[-4rem] md:top-0 pb-2 font-medium">
           Now
