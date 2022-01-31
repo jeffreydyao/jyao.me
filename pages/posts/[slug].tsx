@@ -1,9 +1,8 @@
 // @ts-nocheck
 // TODO: Type below properly
 // post.content and post.slug return error ts(2339)
-// Property '___' does not exist on type '{}'. 
+// Property '___' does not exist on type '{}'.
 // Fix sometime
-
 import Block from "../../components/Block";
 import Layout from "../../components/Layout";
 import PostBody from "../../components/PostBody";
@@ -30,9 +29,7 @@ export default function Post({ post }: any) {
           <>
             <article className="mb-32">
               <Head>
-                <title>
-                  {post.title} | Jeffrey Yao
-                </title>
+                <title>{post.title} | Jeffrey Yao</title>
               </Head>
               <PostHeader title={post.title} date={post.date} />
               <PostBody content={post.content} />
@@ -45,35 +42,30 @@ export default function Post({ post }: any) {
 }
 
 export async function getStaticProps({ params }: any) {
-  const post = getPostBySlug(params.slug, [
-    'title',
-    'date',
-    'slug',
-    'content',
-  ])
-  const content = await markdownToHtml(post.content || '')
+  const post = getPostBySlug(params.slug, ["title", "date", "slug", "content"]);
+  const content = await markdownToHtml(post.content || "");
 
   return {
     props: {
       post: {
         ...post,
         content,
-      }
-    }
-  }
+      },
+    },
+  };
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts(['slug'])
+  const posts = getAllPosts(["slug"]);
 
   return {
     paths: posts.map((post) => {
       return {
         params: {
           slug: post.slug,
-        }
-      }
+        },
+      };
     }),
-    fallback: false
-  }
+    fallback: false,
+  };
 }
