@@ -2,6 +2,7 @@
 import Block from "./Block";
 import Link from "next/link";
 import React from "react";
+import DateFormatter from "./DateFormatter";
 
 export default function Posts({ posts }: any) {
   return (
@@ -18,7 +19,9 @@ export default function Posts({ posts }: any) {
                   {post.title}
                 </h3>
               </Link>
-              <p className="text-neutral-400 text-sm pt-1">{post.date}</p>
+              <div className="text-neutral-400 text-sm pt-1">
+                <DateFormatter dateString={post.date} />
+              </div>
             </div>
           ))}
         </div>
