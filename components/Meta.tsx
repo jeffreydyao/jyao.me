@@ -7,7 +7,7 @@ export default function Meta({title, desc}:any) {
         name="description"
         content="First-year Computer Science student @ UNSW"
       />
-      <meta property="og:image" content="public/opengraph.png" />
+      <meta property="og:image" content="/opengraph.png" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
   )
