@@ -12,8 +12,8 @@ export default function Posts({ posts }: any) {
         </h2>
         <div className="flex flex-col gap-5">
           {posts.map((post) => (
-            <div>
-              <Link href={"/posts/" + post.slug}>
+            <div key={post.slug}>
+              <Link href={"/posts/" + post.slug} passHref>
                 <h3 className="text-sm text-neutral-50 hover:text-blue-300 hover:cursor-pointer transition-all duration-[100]">
                   {post.title}
                 </h3>
