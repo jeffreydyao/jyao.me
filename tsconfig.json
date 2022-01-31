@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "lib/api.js", "lib/markdownToHtml.js", "lib/markdownToHtml.js", "components/PostBody.js", "pages/posts/[slug].js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "lib/api.js", "lib/markdownToHtml.tsx", "lib/markdownToHtml.tsx", "components/PostBody.tsx", "pages/posts/[slug].js"],
   "exclude": ["node_modules"]
 }

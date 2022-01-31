@@ -14,6 +14,7 @@ import markdownToHtml from "../../lib/markdownToHtml";
 import Error from "next/error";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 export default function Post({ post }: any) {
   const router = useRouter();
@@ -23,6 +24,11 @@ export default function Post({ post }: any) {
   return (
     <Layout>
       <Block>
+        <Link href="/" passHref>
+          <h2 className="text-neutral-50 text-sm md:absolute md:left-[-5.025rem] pb-2 pt-[0.185rem] md:top-0 hover:text-blue-300 hover:cursor-pointer transition-all duration-[100] font-medium">
+          ← Back
+          </h2>
+        </Link>
         {router.isFallback ? (
           <PostTitle>Loading...</PostTitle>
         ) : (
