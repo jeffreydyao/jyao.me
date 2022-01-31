@@ -2,10 +2,15 @@ import type { NextPage } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Layout from "../components/Layout";
+import Head from "next/head";
+import { CMS_NAME } from "../lib/constants";
 
 const Home: NextPage = () => {
   return (
     <Layout>
+      <Head>
+        <title>Now | {CMS_NAME}</title>
+      </Head>
       <div className="md:relative mt-12">
         <Link href="/" passHref>
           <h2 className="text-neutral-50 text-sm md:absolute md:left-[-5.2rem] pb-2 md:top-0 hover:text-blue-300 hover:cursor-pointer transition-all duration-[100] font-medium">
