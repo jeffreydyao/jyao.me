@@ -1,0 +1,28 @@
+// @ts-nocheck
+import Block from "./Block";
+import Link from "next/link";
+import React from "react";
+
+export default function Posts({ posts }: any) {
+  return (
+    <Block>
+      <div className="md:relative md:mt-16 mt-8 transition-all duration-[100]">
+        <h2 className="text-neutral-50 text-sm md:absolute md:left-[-4.45rem] md:top-0 pb-7 font-medium">
+          Posts
+        </h2>
+        <div className="flex flex-col gap-5">
+          {posts.map((post) => (
+            <div>
+              <Link href={"/posts/" + post.slug}>
+                <h3 className="text-sm text-neutral-50 hover:text-blue-300 hover:cursor-pointer transition-all duration-[100]">
+                  {post.title}
+                </h3>
+              </Link>
+              <p className="text-neutral-400 text-sm pt-1">{post.date}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </Block>
+  );
+}

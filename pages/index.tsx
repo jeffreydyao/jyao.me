@@ -6,8 +6,11 @@ import Layout from "../components/Layout";
 import Projects from "../components/Projects";
 import { CMS_NAME } from "../lib/constants";
 import Head from "next/head";
+import Posts from "../components/Posts";
+import { getAllPosts } from "../lib/api";
 
-const Home: NextPage = () => {
+// Check type for allPosts
+export default function Home({ allPosts }: any) {
   return (
     <Layout>
       <Head>
@@ -26,15 +29,21 @@ const Home: NextPage = () => {
       </div>
 
       <Projects />
-
-      <div className="md:relative md:mt-16 mt-8 transition-all duration-[100]">
-        <h2 className="text-neutral-50 text-sm md:absolute md:left-[-4.45rem] md:top-0 pb-7 font-medium">
-          Posts
-        </h2>
-        <div className="flex flex-col">{/* Map posts here */}</div>
-      </div>
+      
+      <Posts posts={allPosts}/>
     </Layout>
   );
-};
+}
 
-export default Home;
+
+export async function getStaticProps() {
+  const allPosts = getAllPosts([
+    'title',
+    'date',
+    'slug',
+  ])
+
+  return {
+    props: { allPosts },
+  }
+}
