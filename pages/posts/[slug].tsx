@@ -25,9 +25,9 @@ export default function Post({ post }: any) {
     <Layout>
       <Block>
         <Link href="/" passHref>
-          <h2 className="text-neutral-50 text-sm md:absolute md:left-[-5.025rem] pb-2 pt-[0.185rem] md:top-0 hover:text-blue-300 hover:cursor-pointer transition-all duration-[100] font-medium">
+          <a className="text-neutral-50 text-sm md:absolute md:left-[-5.025rem] pb-2 pt-[0.185rem] md:top-0 hover:text-blue-300 hover:cursor-pointer transition-all duration-[100] font-medium">
           ← Back
-          </h2>
+          </a>
         </Link>
         {router.isFallback ? (
           <PostTitle>Loading...</PostTitle>

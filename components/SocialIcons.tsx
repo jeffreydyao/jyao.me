@@ -2,8 +2,10 @@
 // https://stackoverflow.com/questions/46215614/property-does-not-exist-on-type-detailedhtmlprops-htmldivelement-with-react
 
 import React from "react";
+import { usePlausible } from "next-plausible";
 
 export default function SocialIcons() {
+  const plausible = usePlausible()
   return (
     <div className="flex flex-row gap-4 pt-6 items-center">
       <a

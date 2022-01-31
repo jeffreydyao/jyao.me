@@ -13,9 +13,9 @@ const Home: NextPage = () => {
       </Head>
       <div className="md:relative mt-12">
         <Link href="/" passHref>
-          <h2 className="text-neutral-50 text-sm md:absolute md:left-[-5.2rem] pb-2 md:top-0 hover:text-blue-300 hover:cursor-pointer transition-all duration-[100] font-medium">
+          <a className="text-neutral-50 text-sm md:absolute md:left-[-5.2rem] pb-2 md:top-0 hover:text-blue-300 hover:cursor-pointer transition-all duration-[100] font-medium">
           ← Back
-          </h2>
+          </a>
         </Link>
         <p className="text-neutral-400 text-sm">
           Last updated January 28th, 2022, from Sydney.

@@ -17,14 +17,14 @@ export default function Home({ allPosts }: any) {
         <title>{CMS_NAME}</title>
       </Head>
       <div className="md:relative mt-12 transition-all duration-[100]">
-        <h2 className="text-neutral-50 text-sm md:absolute md:left-[-4rem] md:top-0 pb-2 font-medium">
+        <h2 className="text-neutral-50 text-sm md:absolute md:left-[-4rem] md:top-[0.175rem] pb-2 font-medium">
           Now
         </h2>
         <Link href="/now" passHref>
-          <p className="text-neutral-50 text-sm hover:text-blue-300 hover:cursor-pointer transition-all duration-[100]">
+          <a className="text-neutral-50 text-sm hover:text-blue-300 hover:cursor-pointer transition-all duration-[100]">
             Settling into CS, building things for fun and exploring Sydney more!
             →
-          </p>
+          </a>
         </Link>
       </div>
 
