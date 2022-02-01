@@ -7,11 +7,12 @@ import { usePlausible } from "next-plausible";
 export default function SocialIcons() {
   const plausible = usePlausible()
   return (
-    <div className="flex flex-row gap-4 pt-6 items-center">
+    <div className="flex flex-row items-center gap-4 pt-6">
       <a
         aria-label="GitHub"
         title="GitHub"
         href="https://github.com/jeffreydyao"
+        onClick={() => plausible('GitHub')}
       >
         <svg
           className="w-5 fill-neutral-50 hover:fill-blue-300 transition-all duration-[100]"
@@ -27,7 +28,7 @@ export default function SocialIcons() {
       </a>
       <a aria-label="LinkedIn" title="LinkedIn - WIP">
         {" "}
-        {/* TODO: Update LinkedIn profile and add link */}
+        {/* TODO: Update LinkedIn profile and add link + Plausible custom event tracking */}
         <svg
           className="w-4 fill-neutral-50 hover:fill-blue-300 transition-all duration-[100]"
           xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +39,7 @@ export default function SocialIcons() {
       </a>
       <a aria-label="Twitter" title="Twitter - WIP">
         {" "}
-        {/* TODO: Update LinkedIn profile and add link */}
+        {/* TODO: Update Twitter profile and add link */}
         <svg
           className="w-5 fill-neutral-50 hover:fill-blue-300 transition-all duration-[100]"
           xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +52,7 @@ export default function SocialIcons() {
           />
         </svg>
       </a>
-      <a aria-label="Email" title="Email" href="mailto:hello@jyao.me">
+      <a aria-label="Email" title="Email" href="mailto:hello@jyao.me" onClick={() => plausible('Email')}>
         <svg
           className="w-5 fill-neutral-50 hover:fill-blue-300 transition-all duration-[100]"
           xmlns="http://www.w3.org/2000/svg"
