@@ -56,20 +56,20 @@ export default function Projects() {
                 />
               </div>
 
-              <h3 className="text-neutral-50 text-base md:pt-9 pt-7">{name}</h3>
-              <p className="text-neutral-400 text-sm pt-1">{date}</p>
-              <div className="flex md:flex-row flex-col justify-start pt-3 md:gap-14 gap-8">
+              <h3 className="text-base text-neutral-50 md:pt-9 pt-7">{name}</h3>
+              <p className="pt-1 text-sm text-neutral-400">{date}</p>
+              <div className="flex flex-col justify-start gap-8 pt-3 md:flex-row md:gap-14">
                 <div className="flex flex-col gap-4">
-                  <p className="text-neutral-300 text-sm md:max-w-xs leading-5">
+                  <p className="text-sm leading-5 text-neutral-300 md:max-w-xs">
                     {description}
                   </p>
-                  <p className="text-neutral-300 text-sm md:max-w-xs leading-5">
+                  <p className="text-sm leading-5 text-neutral-300 md:max-w-xs">
                     {builtwith}
                   </p>
                 </div>
                 <div>
-                  <div className="border-t-2 w-8 border-neutral-600 md:pb-2 pb-3" />
-                  <div className="flex md:flex-col flex-row align-middle md:gap-2 gap-3">
+                  <div className="w-8 pb-3 border-t-2 border-neutral-600 md:pb-2" />
+                  <div className="flex flex-row gap-3 align-middle md:flex-col md:gap-2">
                     <a
                       href={link}
                       className="text-neutral-100 text-xs md:pt-1 hover:text-blue-300 hover:cursor-pointer transition-all duration-[100]"

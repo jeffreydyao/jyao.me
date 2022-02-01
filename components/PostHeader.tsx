@@ -6,7 +6,7 @@ export default function PostHeader({ title, date }: any) {
   return (
     <>
       <PostTitle>{title}</PostTitle>
-      <div className="text-neutral-400 text-sm pt-2">
+      <div className="pt-2 text-sm text-neutral-400">
         <DateFormatter dateString={date} />
       </div>
     

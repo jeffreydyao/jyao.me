@@ -8,7 +8,7 @@ export default function Posts({ posts }: any) {
   return (
     <Block>
       <div className="md:relative md:mt-16 mt-8 transition-all duration-[100]">
-        <h2 className="text-neutral-50 text-sm md:absolute md:left-[-4.45rem] md:top-[0.175rem] pb-7 font-medium">
+        <h2 className="text-neutral-50 text-sm md:absolute md:left-[-4.45rem] md:top-[0.175rem] pb-2 font-medium">
           Posts
         </h2>
         <div className="flex flex-col gap-5">
@@ -19,7 +19,7 @@ export default function Posts({ posts }: any) {
                   {post.title}
                 </a>
               </Link>
-              <div className="text-neutral-400 text-sm pt-1">
+              <div className="pt-1 text-sm text-neutral-400">
                 <DateFormatter dateString={post.date} />
               </div>
             </div>
