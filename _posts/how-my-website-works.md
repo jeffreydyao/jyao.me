@@ -29,8 +29,10 @@ I built the site with **Next.js** and **React** then deployed on **Vercel**. Nex
 
 Hitting 100 on the Lighthouse DevTools test across mobile and desktop was a priority, and although it was already close, **preloading fonts** got me to the magic number.
 
+As a bonus, I've added **continuous integration via GitHub Actions**. On every push to `main`, the repo's code is formatted using `prettier`. 
+
 # Part 2: Takeaways
-Building this website gave me a good understanding of React components, using the `Map()` function, TypeScript interfaces + types and transforming Markdown to HTML! It helped me practice taking a concept from code, and all the problem-solving skills involved. There's still a lot to learn, but I'll get there. 
+Building this website gave me a good understanding of React components, using the `Map()` function, TypeScript interfaces + types, transforming Markdown to HTML and CI via GitHub Actions! It helped me practice the problem solving skills required to take a concept to code. There's still a lot to learn, but I'll get there. 
 
 And when in doubt, code it - you'll never know until you try.
 
