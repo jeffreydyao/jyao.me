@@ -1,5 +1,5 @@
 import React from "react";
-import listeningTo from "../public/listeningto.png";
+import recentlyplayed from "../public/recentlyplayed.png";
 import Block from "../components/Block";
 import Image from "next/image";
 
@@ -19,16 +19,16 @@ interface ProjectItem {
 // TODO: Define post as prop; if boolean operator "no" is passed (aka a post hasn't been written for the project yet) the Post link won't display
 const projects: ProjectItem[] = [
   {
-    name: "Listening To",
-    date: "January 2022",
-    image: listeningTo,
-    alt: "Mockup of Listening To app",
+    name: "Recently Played",
+    date: "February 2022",
+    image: recentlyplayed,
+    alt: "Mockup of Recently Played web app",
     description:
-      "Lets Last.fm users share a link with their friends that shows what music they've been listening to recently.",
+      "Show the world what you've been playing recently on Spotify, listen to track previews and find each song's full version on Spotify and Apple Music.",
     builtwith:
-      "Built with Next.js + React + Last.fm API, deployed with Vercel.",
-    link: "https://listening-to.vercel.app/",
-    github: "https://github.com/jeffreydyao/listening-to-v2",
+      "Built with Next.js + React + Radix Primitives + Spotify / MusicKit API, deployed with Vercel.",
+    link: "https://mixtape.jyao.me/",
+    github: "https://github.com/jeffreydyao/recently-played",
   },
 ];
 
