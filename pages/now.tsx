@@ -41,11 +41,11 @@ const Home: NextPage = () => {
           frameworks / libraries / technologies!
         </p>
         <p className="text-neutral-300 text-sm leading-[1.5rem] pt-4 max-w-[500px]">
-          I just finished a web app that shows people what you've been listening
+          I just finished a web app that shows people what you&apos;ve been listening
           to recently on Spotify! I had to get deep into Next.js, React and
           JS/TS to do it. Next I&apos;m planning on doing something with data
           visualisation or real-time collaboration, or learning more C / Go.
-          There&apos;re heaps of cool things being developed on the web, and I'm
+          There&apos;re heaps of cool things being developed on the web, and I&apos;m
           keen to get stuck into trying some new things!
         </p>
         <h3 className="pt-6 font-semibold text-neutral-50 text-md">
@@ -58,16 +58,16 @@ const Home: NextPage = () => {
           Exploring more
         </h3>
         <p className="text-neutral-300 text-sm leading-[1.5rem] pt-3 max-w-[500px]">
-          I've been exploring Sydney more recently, which makes me very happy.
+          I&apos;ve been exploring Sydney more recently, which makes me very happy.
           The past two years have made me appreciate small moments, like basking
           in the glow of a sunset and taking in the smell of nature, more.
-          Here's to more moments like that this year!
+          Here&apos;s to more moments like that this year!
         </p>
         <h3 className="pt-6 font-semibold text-neutral-50 text-md">
           Trying to take more photos
         </h3>
         <p className="text-neutral-300 text-sm leading-[1.5rem] pt-3 max-w-[500px]">
-          I got a film camera recently! It's beautiful and I just shot my first
+          I got a film camera recently! It&apos;s beautiful and I just shot my first
           roll of film on it. Photos coming soon.
         </p>
       </div>
