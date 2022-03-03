@@ -1,16 +1,13 @@
-import type { NextPage } from "next";
-import Image from "next/image";
-import listeningTo from "../public/listeningto.png";
-import Link from "next/link";
-import Layout from "../components/Layout";
-import Projects from "../components/Projects";
-import { CMS_NAME } from "../lib/constants";
-import Head from "next/head";
-import Posts from "../components/Posts";
-import { getAllPosts } from "../lib/api";
+import Layout from '../components/Layout';
+import Posts from '../components/Posts';
+import Projects from '../components/Projects';
+import {getAllPosts} from '../lib/api';
+import {CMS_NAME} from '../lib/constants';
+import Head from 'next/head';
+import Link from 'next/link';
 
 // Check type for allPosts
-export default function Home({ allPosts }: any) {
+export default function Home({allPosts}: any) {
   return (
     <Layout>
       <Head>
@@ -22,28 +19,23 @@ export default function Home({ allPosts }: any) {
         </h2>
         <Link href="/now" passHref>
           <a className="text-neutral-50 text-sm hover:text-blue-300 hover:cursor-pointer transition-all duration-[100]">
-            Learning by building things, diving into new opportunities and shooting film!
-            →
+            Learning by building things, diving into new opportunities and
+            shooting film! →
           </a>
         </Link>
       </div>
 
       <Projects />
-      
-      <Posts posts={allPosts}/>
+
+      <Posts posts={allPosts} />
     </Layout>
   );
 }
 
-
 export async function getStaticProps() {
-  const allPosts = getAllPosts([
-    'title',
-    'date',
-    'slug',
-  ])
+  const allPosts = getAllPosts(['title', 'date', 'slug']);
 
   return {
-    props: { allPosts },
-  }
+    props: {allPosts},
+  };
 }

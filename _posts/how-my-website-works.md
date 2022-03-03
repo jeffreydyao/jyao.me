@@ -1,6 +1,6 @@
 ---
-title: "How my website works"
-date: "2022-01-31"
+title: 'How my website works'
+date: '2022-01-31'
 ---
 
 I wanted my site to be minimal and fast. Great design is important to me, so it had to look good too!

@@ -1,14 +1,14 @@
-import Layout from "../components/Layout";
-import { CMS_NAME } from "../lib/constants";
-import film1 from "../public/film1.jpg";
-import film2 from "../public/film2.jpg";
-import film3 from "../public/film3.jpg";
-import film4 from "../public/film4.jpg";
-import film5 from "../public/film5.jpg";
-import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
+import Layout from '../components/Layout';
+import {CMS_NAME} from '../lib/constants';
+import film1 from '../public/film1.jpg';
+import film2 from '../public/film2.jpg';
+import film3 from '../public/film3.jpg';
+import film4 from '../public/film4.jpg';
+import film5 from '../public/film5.jpg';
+import type {NextPage} from 'next';
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const Home: NextPage = () => {
   return (
@@ -29,13 +29,13 @@ const Home: NextPage = () => {
           Seeking out as many opportunities as possible
         </h3>
         <p className="text-neutral-300 text-sm leading-[1.5rem] pt-3 max-w-[500px]">
-          I competed in my{" "}
+          I competed in my{' '}
           <a
             href="https://devpost.com/software/greenways-bkytwg?ref_content=user-portfolio&ref_feature=in_progress"
             className="text-blue-400 transition-all hover:text-blue-500 hover:cursor-pointer"
           >
             first hackathon
-          </a>{" "}
+          </a>{' '}
           recently, building something I was proud of with my team! I&apos;ve
           also been attending networking / recruitment events and applying for
           subcoms. Also attempting to apply for internships this year, so
@@ -70,9 +70,9 @@ const Home: NextPage = () => {
         </p>
         <p className="text-neutral-300 text-sm leading-[1.5rem] pt-4 max-w-[500px]">
           I&apos;m trying to find the shape of what that career would look like
-          while keeping my options open. Recently, I&apos;ve taken an interest in
-          ambient computing. I wonder how we&apos;ll be interacting with technology
-          in a decade - and I want to be at the edge of that field.
+          while keeping my options open. Recently, I&apos;ve taken an interest
+          in ambient computing. I wonder how we&apos;ll be interacting with
+          technology in a decade - and I want to be at the edge of that field.
         </p>
 
         <h3 className="pt-6 font-semibold text-neutral-50 text-md">
@@ -91,11 +91,36 @@ const Home: NextPage = () => {
           Fujifilm Superia X-TRA 400, on a Canon Canonet QL17.
         </p>
         <div className="flex flex-col gap-8 py-6 overflow-hidden duration-300">
-          <Image src={film1} alt="test" layout="responsive" className="rounded-xl hover:brightness-[1.10] transition-all"/>
-          <Image src={film2} alt="test" layout="responsive" className="rounded-xl hover:brightness-[1.10] transition-all"/>
-          <Image src={film3} alt="test" layout="responsive" className="rounded-xl hover:brightness-[1.10] transition-all"/>
-          <Image src={film4} alt="test" layout="responsive" className="rounded-xl hover:brightness-[1.10] transition-all"/>
-          <Image src={film5} alt="test" layout="responsive" className="rounded-xl hover:brightness-[1.10] transition-all"/>
+          <Image
+            src={film1}
+            alt="test"
+            layout="responsive"
+            className="rounded-xl hover:brightness-[1.10] transition-all"
+          />
+          <Image
+            src={film2}
+            alt="test"
+            layout="responsive"
+            className="rounded-xl hover:brightness-[1.10] transition-all"
+          />
+          <Image
+            src={film3}
+            alt="test"
+            layout="responsive"
+            className="rounded-xl hover:brightness-[1.10] transition-all"
+          />
+          <Image
+            src={film4}
+            alt="test"
+            layout="responsive"
+            className="rounded-xl hover:brightness-[1.10] transition-all"
+          />
+          <Image
+            src={film5}
+            alt="test"
+            layout="responsive"
+            className="rounded-xl hover:brightness-[1.10] transition-all"
+          />
         </div>
       </div>
     </Layout>

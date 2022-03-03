@@ -1,10 +1,10 @@
 // @ts-nocheck
-import Block from "./Block";
-import Link from "next/link";
-import React from "react";
-import DateFormatter from "./DateFormatter";
+import Block from './Block';
+import DateFormatter from './DateFormatter';
+import Link from 'next/link';
+import React from 'react';
 
-export default function Posts({ posts }: any) {
+export default function Posts({posts}: any) {
   return (
     <Block>
       <div className="md:relative md:mt-16 mt-8 transition-all duration-[100]">
@@ -12,9 +12,9 @@ export default function Posts({ posts }: any) {
           Posts
         </h2>
         <div className="flex flex-col gap-5">
-          {posts.map((post) => (
+          {posts.map(post => (
             <div key={post.slug}>
-              <Link href={"/posts/" + post.slug} passHref>
+              <Link href={'/posts/' + post.slug} passHref>
                 <a className="text-sm text-neutral-50 hover:text-blue-300 hover:cursor-pointer transition-all duration-[100]">
                   {post.title}
                 </a>

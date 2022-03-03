@@ -1,6 +1,6 @@
-import Head from "next/head";
+import Head from 'next/head';
 
-export default function Meta({ title, desc }: any) {
+export default function Meta({title, desc}: any) {
   return (
     <Head>
       <meta
