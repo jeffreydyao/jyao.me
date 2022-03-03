@@ -70,8 +70,8 @@ const Home: NextPage = () => {
         </p>
         <p className="text-neutral-300 text-sm leading-[1.5rem] pt-4 max-w-[500px]">
           I&apos;m trying to find the shape of what that career would look like
-          while keeping my options open. Recently, I've taken an interest in
-          ambient computing. I wonder how we'll be interacting with technology
+          while keeping my options open. Recently, I&apos;ve taken an interest in
+          ambient computing. I wonder how we&apos;ll be interacting with technology
           in a decade - and I want to be at the edge of that field.
         </p>
 
