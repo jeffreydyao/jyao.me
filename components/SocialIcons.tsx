@@ -26,7 +26,7 @@ export default function SocialIcons() {
           />
         </svg>
       </a>
-      <a aria-label="LinkedIn" title="LinkedIn - WIP">
+      <a aria-label="LinkedIn" title="LinkedIn" href="https://www.linkedin.com/in/jeffreyyao8" onClick={() => plausible('LinkedIn')}>
         {" "}
         {/* TODO: Update LinkedIn profile and add link + Plausible custom event tracking */}
         <svg
@@ -37,7 +37,7 @@ export default function SocialIcons() {
           <path d="M12.038 0H.96C.43 0 0 .419 0 .937V12.06c0 .518.43.94.96.94h11.078c.53 0 .962-.421.962-.937V.937A.95.95 0 0 0 12.038 0ZM3.857 11.078h-1.93V4.872h1.93v6.206Zm-.965-7.051a1.118 1.118 0 1 1-.004-2.236 1.118 1.118 0 0 1 .004 2.236Zm8.186 7.05H9.15V8.063c0-.719-.013-1.646-1.003-1.646-1.003 0-1.155.785-1.155 1.595v3.067H5.068V4.872h1.848v.849h.026c.256-.488.886-1.003 1.823-1.003 1.952 0 2.313 1.284 2.313 2.955v3.405Z" />
         </svg>
       </a>
-      <a aria-label="Twitter" title="Twitter - WIP">
+      <a aria-label="Twitter" title="Twitter" href="https://twitter.com/jeffdyao" onClick={() => plausible('Twitter')}>
         {" "}
         {/* TODO: Update Twitter profile and add link */}
         <svg
