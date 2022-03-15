@@ -26,10 +26,10 @@ const projects: ProjectItem[] = [
     image: greenways,
     alt: 'Demonstration of Greenways web app',
     description:
-      "A UNIHACK '22 hackathon project built in under two days. Led development of front/back-end + designed UX. Visualises postcode-level climate data using a multi-layer map and information cards. Provides calculators which weigh multiple parameters to find savings if solar panels / an EV are used over their less eco-friendly counterparts.",
+      "A UNIHACK '22 hackathon project built in under two days. Won second place, Best Design and four sponsor prizes (Atlassian, Bukalapak, Bosch, Tyro), culminating in an internship offer from Bukalapak. Led development of front/back-end + designed UX. Visualises postcode-level climate data using a multi-layer map and information cards. Provides calculators which weigh multiple parameters to find savings if solar panels / an EV are used over their less eco-friendly counterparts.",
     builtwith:
       'Built with Next.js + React + Chakra UI + Mapbox GL JS + MySQL, deployed on Vercel + PlanetScale.',
-    link: 'https://greenways.vercel.app/',
+    link: 'https://devpost.com/software/greenways-bkytwg?ref_content=user-portfolio&ref_feature=in_progress',
     github: 'https://github.com/UNIHACK2022/UNIHACK-22',
   },
   {

@@ -19,8 +19,7 @@ export default function Home({allPosts}: any) {
         </h2>
         <Link href="/now" passHref>
           <a className="text-neutral-50 text-sm hover:text-blue-300 hover:cursor-pointer transition-all duration-[100]">
-            Learning by building things, diving into new opportunities and
-            shooting film! →
+            Hacking on new side projects & interning at Bukalapak later this year! →
           </a>
         </Link>
       </div>

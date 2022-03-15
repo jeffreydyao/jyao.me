@@ -23,7 +23,7 @@ const Home: NextPage = () => {
           </a>
         </Link>
         <p className="pt-3 text-sm text-neutral-400 md:pt-0">
-          Last updated March 3rd, 2022, from Sydney.
+          Last updated March 16th, 2022, from Sydney.
         </p>
         <h3 className="pt-6 font-semibold text-neutral-50 text-md">
           Seeking out as many opportunities as possible
@@ -36,10 +36,12 @@ const Home: NextPage = () => {
           >
             first hackathon
           </a>{' '}
-          recently, building something I was proud of with my team! I&apos;ve
-          also been attending networking / recruitment events and applying for
-          subcoms. Also attempting to apply for internships this year, so
-          started learning DS&A ahead. My aim is to gain experience across a
+          recently, and our team won second prize, best design and four sponsor
+          prizes - I'm extremely proud! Through it, I landed my first internship
+          at Bukalapak starting later this year, where I'm excited to be working
+          on real-world projects that make a difference to warungs in Indonesia.
+          I'm also now in the DigiSoc Careers and CSESoc Education subcommittees
+          at UNSW, which is awesome. My aim is still to gain experience across a
           broad range of domains as quickly as possible, so I can scope out what
           I like while building a T-shaped knowledge base.
         </p>
@@ -51,13 +53,11 @@ const Home: NextPage = () => {
           frameworks / libraries / technologies + expand my knowledge!
         </p>
         <p className="text-neutral-300 text-sm leading-[1.5rem] pt-4 max-w-[500px]">
-          For my hackathon project, I had to learn MySQL databases in less than
-          three hours to deploy a database. If I get into the subcom I want,
-          I&apos;ll build something vastly out of my area of expertise.
-          I&apos;ll have to learn system design and scaling, Docker and
-          Kubernetes, and dive deeper into web development. If not, I&apos;ll
-          work on something visualising real-time data and focus more on
-          back-end. I&apos;m excited!
+          At CSESoc Education, I'm hacking on an interactive coding tutorials
+          platform which uses WebAssembly to compile code. The idea is to
+          provide an introduction to commonly used languages and concepts in CS
+          by working through real-world examples. There's lots to get stuck
+          into, and I'm excited to learn!
         </p>
         <h3 className="pt-6 font-semibold text-neutral-50 text-md">
           Considering the direction of my career
