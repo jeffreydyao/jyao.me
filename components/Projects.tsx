@@ -1,6 +1,7 @@
 import Block from '../components/Block';
 import greenways from '../public/greenways.png';
 import recentlyplayed from '../public/recentlyplayed.png';
+import sunrisesunsettimes from '../public/sunrise-sunset-times.png';
 import Image from 'next/image';
 import React from 'react';
 
@@ -20,11 +21,22 @@ interface ProjectItem {
 // TODO: Define post as prop; if boolean operator "no" is passed (aka a post hasn't been written for the project yet) the Post link won't display
 const projects: ProjectItem[] = [
   {
+    name: 'Sunrise / Sunset Times',
+    date: 'April 2022',
+    image: sunrisesunsettimes,
+    alt: 'Screenshot of Sunrise / Sunset Times Raycast extension',
+    description:
+      'A snappy Raycast extension that lets you check sunrise / sunset times for dates up to a month from now. Uses IP geolocation to get your current location, and suncalc.js to calculate sunrise/sunset times.',
+    builtwith: 'Built with TypeScript + React + Node.js.',
+    link: 'https://www.youtube.com/watch?v=fDuQmP4NryE&feature=youtu.be',
+    github: 'https://github.com/jeffreydyao/sunrise-sunset-times',
+  },
+  {
     name: 'Greenways',
     date: '25–⁠27 February 2022',
     // Place gif image here
     image: greenways,
-    alt: 'Demonstration of Greenways web app',
+    alt: 'Screenshot of Greenways web app',
     description:
       "A UNIHACK '22 hackathon project built in under two days. Won second place, Best Design and four sponsor prizes (Atlassian, Bukalapak, Bosch, Tyro), culminating in an internship offer from Bukalapak. Led development of front/back-end + designed UX. Visualises postcode-level climate data using a multi-layer map and information cards. Provides calculators which weigh multiple parameters to find savings if solar panels / an EV are used over their less eco-friendly counterparts.",
     builtwith:
@@ -36,7 +48,7 @@ const projects: ProjectItem[] = [
     name: 'Recently Played',
     date: 'January–⁠February 2022',
     image: recentlyplayed,
-    alt: 'Mockup of Recently Played web app',
+    alt: 'Screenshot of Recently Played web app',
     description:
       "Show the world what you've been playing recently on Spotify, listen to track previews and find each song's full version on Spotify and Apple Music.",
     builtwith:
