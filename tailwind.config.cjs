@@ -4,4 +4,5 @@ module.exports = {
 		extend: {},
 	},
 	plugins: [],
+	presets: [require('windy-radix-palette')],
 }
