@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "postcss-import": "^14.1.0",
+    "smartypants": "^0.1.6",
     "windy-radix-palette": "^0.1.1"
   }
 }
