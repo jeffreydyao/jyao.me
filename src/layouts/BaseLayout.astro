@@ -1,5 +1,9 @@
 ---
   import BaseHead from "../components/BaseHead.astro";
+  import '../styles/base.css';
+  import NavItem from "../components/Navbar/NavItem.astro";
+  import ThemeToggle from "../components/Navbar/ThemeToggle";
+  import MobileMenu from "../components/Navbar/MobileMenu"
 ---
 
 <!DOCTYPE html>
@@ -29,6 +33,16 @@
 </head>
 
 <body class="bg-gray-2 flex flex-col items-center">
+  <div class="md:pt-12 justify-between md:w-[672px] w-full px-8 pt-8 flex items-center">
+    <MobileMenu client:media="(max-width: 768px)" />
+    <div class="md:flex gap-8 hidden">
+      <NavItem href="/" text="Home" />
+      <NavItem href="/blog" text="Blog" />
+      <NavItem href="/projects" text="Projects" />
+    </div>
+
+    <ThemeToggle client:load />
+  </div>
   <slot />
 </body>
 

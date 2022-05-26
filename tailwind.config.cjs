@@ -11,6 +11,6 @@ module.exports = {
     }
   },
   darkmode: "class",
-  plugins: [],
+  plugins: [require("tailwind-hamburgers")],
   presets: [require("windy-radix-palette")]
 }

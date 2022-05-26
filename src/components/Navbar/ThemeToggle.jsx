@@ -1,4 +1,4 @@
-import { createEffect, createSignal } from "solid-js";
+import { createEffect, createSignal, onCleanup } from "solid-js";
 import { Moon, Sun } from "../Icons";
 
 function getTheme() {
@@ -22,7 +22,7 @@ export default function ThemeToggle() {
 
   return (
     <button
-      class="fill-gray-12"
+      class="fill-gray-12 z-50"
       aria-label={`Toggle theme`}
       onClick={() => {
         const newTheme = theme() === "light" ? "dark" : "light";

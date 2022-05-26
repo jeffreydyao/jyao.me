@@ -1,0 +1,13 @@
+---
+  import BaseLayout from '../layouts/BaseLayout.astro';
+  import '../styles/base.css';
+  import ThemeToggle from '../components/Navbar/ThemeToggle.jsx'
+---
+
+<BaseLayout title="Welcome to Astro.">
+  <main>
+    <p class='text-tomato-12'>Test</p>
+    <p class="font-display text-lg font-bold">This is a test of Inter Display.</p>
+    <ThemeToggle client:load />
+  </main>
+</BaseLayout>
