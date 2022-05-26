@@ -10,6 +10,7 @@ module.exports = {
       }
     }
   },
+  darkmode: "class",
   plugins: [],
   presets: [require("windy-radix-palette")]
 }

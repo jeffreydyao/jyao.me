@@ -7,6 +7,25 @@
 
 <head>
   <BaseHead />
+  <script is:inline>
+    // Sets theme on page load.
+    // Respect localStorage preference first then system.
+    const theme = (() => {
+      if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+        return localStorage.getItem('theme')
+      }
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        return 'dark';
+      }
+      return 'light';
+    })()
+
+    if (theme === 'light') {
+      document.documentElement.classList.remove('dark');
+    } else {
+      document.documentElement.classList.add('dark')
+    }
+  </script>
 </head>
 
 <body class="bg-gray-2 flex flex-col items-center">
