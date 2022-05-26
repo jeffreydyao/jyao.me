@@ -22,8 +22,8 @@ export default function ThemeToggle() {
 
   return (
     <button
-      class="flex justify-center items-center p-4 fill-gray-12"
-      aria-label={`Toggle theme to ${theme()}`}
+      class="fill-gray-12"
+      aria-label={`Toggle theme`}
       onClick={() => {
         const newTheme = theme() === "light" ? "dark" : "light";
         console.log(newTheme);
@@ -40,7 +40,7 @@ export default function ThemeToggle() {
         setTheme(newTheme);
       }}
     >
-      {theme() === "dark" ? Moon : Sun}
+      {theme() === "dark" ? Sun : Moon}
     </button>
   );
 }
