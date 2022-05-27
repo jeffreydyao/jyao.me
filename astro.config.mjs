@@ -2,6 +2,7 @@ import { defineConfig } from "astro/config"
 import sitemap from "@astrojs/sitemap"
 import tailwind from "@astrojs/tailwind"
 import solid from "@astrojs/solid-js"
+import { astroImageTools } from "astro-imagetools"
 
 // https://astro.build/config
 export default defineConfig({
@@ -14,6 +15,7 @@ export default defineConfig({
         applyBaseStyles: false
       }
     }),
-    solid()
+    solid(),
+    astroImageTools()
   ]
 })
