@@ -1,23 +1,24 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { Img } from 'astro-imagetools/components'
+const projects = await Astro.glob('../pages/projects/*.md')
 ---
 
 <BaseLayout title="Welcome to Astro.">
-  <div class="md:mt-6 text-gray-12 md:w-[26rem]">
+  <div class="md:mt-6  text-gray-12 md:w-[32rem]">
     <h1 class="mb-2 text-3xl font-bold font-display">Projects</h1>
-    <h2 class="mb-2 text-gray-11">I’ve found that the best way of learning is through building. Here’re the things that
+    <h2 class="mb-10 text-gray-11">I’ve found that the best way of learning is through building. Here’re the things that
       I’ve built - small, big, for fun and for learning.</h2>
-
-    <h3 class="mb-4 text-xl font-semibold font-display">Featured Posts</h3>
-    <!-- TODO: Featured Posts card layout -->
-    <a href="/blog/" class="transition-all text-gray-11 hover:text-green-11">Read all posts -></a>
-
-
-    <h3 class="mb-4 text-xl font-semibold font-display">Featured Projects</h3>
-    <!-- TODO: Featured Projects card layout -->
-    <a href="/blog/" class="transition-all text-gray-11 hover:text-green-11">See all projects -></a>
-
-
-
+  </div>
+  <div class="flex flex-col gap-12 md:gap-16 md:grid md:grid-cols-2">
+    {projects.map((project) => (
+    <a href={project.url}>
+      <h3 class="mb-1 text-xl font-semibold font-display">{project.frontmatter.name}</h3>
+      <p class="mb-3 text-gray-11">{project.frontmatter.date}</p>
+      <p class="mb-8 text-gray-12">{project.frontmatter.description}</p>
+      <Img src={project.frontmatter.image} alt={`Screenshot of ${project.frontmatter.name}`} attributes={{ img: {
+        class: 'rounded-2xl' } }} />
+    </a>
+    ))}
   </div>
 </BaseLayout>

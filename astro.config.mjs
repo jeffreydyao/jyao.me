@@ -7,6 +7,9 @@ import { astroImageTools } from "astro-imagetools"
 // https://astro.build/config
 export default defineConfig({
   site: "https://jyao.me",
+  experimental: {
+    integrations: true
+  },
   integrations: [
     sitemap(),
     tailwind({
@@ -16,6 +19,6 @@ export default defineConfig({
       }
     }),
     solid(),
-    astroImageTools()
+    astroImageTools
   ]
 })

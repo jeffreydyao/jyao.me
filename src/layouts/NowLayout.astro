@@ -9,7 +9,7 @@ const { content } = Astro.props;
     <h2 class="mb-2 text-gray-11">Updated {content.date}, from {content.location}.</h2>
   </div>
   <article
-    class="prose prose-headings:md dark:prose-invert prose-code:before:content-none prose-code:after:content-none prose-bullets:fill-red-9">
+    class="prose prose-headings:md dark:prose-invert prose-code:before:content-none prose-code:after:content-none prose-lead:">
     <slot />
   </article>
 </BaseLayout>
