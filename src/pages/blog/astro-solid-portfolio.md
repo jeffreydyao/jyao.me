@@ -1,7 +1,8 @@
 ---
-# Example: src/pages/index.md
-
-## title: Hello, World
+title: Building my portfolio using Astro and Solid
+desc: Learn why I moved my portfolio from Next.js to Astro and Solid, and how I designed it.
+date: 2022-05-12
+layout: ../../layouts/BlogLayout.astro
 ---
 
 # Hi there!

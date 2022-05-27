@@ -3,9 +3,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="Welcome to Astro.">
-	<div class="md:pt-6 text-gray-12 md:w-[26rem]">
-		<h1 class="pb-2 text-3xl font-bold font-display">Jeffrey Yao</h1>
-		<h2 class="pb-2 text-gray-11">First year CS student at UNSW Sydney</h2>
-		<p>Building beautiful, performant things that scratch the itch to create and learn.</p>
+	<div class="md:mt-6 text-gray-12 md:w-[26rem]">
+		<h1 class="mb-2 text-3xl font-bold font-display">Jeffrey Yao</h1>
+		<h2 class="mb-2 text-gray-11">First year CS student at UNSW Sydney</h2>
+		<p class="mb-12">Building beautiful, performant things that scratch the itch to create and learn.</p>
+
+		<h3 class="mb-4 text-xl font-semibold font-display">Featured Posts</h3>
+		<!-- TODO: Featured Posts card layout -->
+		<a href="/blog/" class="transition-all text-gray-11 hover:text-green-11">Read all posts -></a>
+
+
+		<h3 class="mb-4 text-xl font-semibold font-display">Featured Projects</h3>
+		<!-- TODO: Featured Projects card layout -->
+		<a href="/blog/" class="transition-all text-gray-11 hover:text-green-11">See all projects -></a>
+
+
+
 	</div>
 </BaseLayout>

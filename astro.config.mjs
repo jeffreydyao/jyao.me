@@ -15,10 +15,5 @@ export default defineConfig({
       }
     }),
     solid()
-  ],
-  vite: {
-    ssr: {
-      noExternal: ["delicious-hamburgers"]
-    }
-  }
+  ]
 })

@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@motionone/solid": "10.8.0",
+    "@tailwindcss/typography": "^0.5.2",
     "classnames": "^2.3.1",
     "motion": "^10.9.0",
     "postcss-import": "^14.1.0",

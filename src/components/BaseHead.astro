@@ -1,13 +1,13 @@
 ---
-  import { smartypants } from 'smartypants';
+import { smartypants } from 'smartypants';
 
-  const { canonicalURL = Astro.canonicalURL } = Astro.props
-  const image = new URL(Astro.props.image || './social.png', Astro.site)
-  const description = Astro.props.description || 'Building beautiful, performant things that scratch the itch to create and learn.'
+const { canonicalURL = Astro.canonicalURL } = Astro.props
+const image = new URL(Astro.props.image || './social.png', Astro.site)
+const description = Astro.props.description || 'Building beautiful, performant things that scratch the itch to create and learn.'
 
-  const title = [Astro.props.title, 'Jeffrey Yao']
-    .filter(Boolean)
-    .join(' | ')
+const title = [Astro.props.title, 'Jeffrey Yao']
+  .filter(Boolean)
+  .join(' | ')
 
 ---
 
@@ -22,6 +22,27 @@
 <!-- Preload -->
 <!-- TODO: Check if this is needed before production. If not, remove it. -->
 <slot name="preload" />
+
+<!-- Scripts -->
+<script is:inline>
+  // Sets theme on page load.
+  // Respect localStorage preference first then system.
+  const theme = (() => {
+    if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+      return localStorage.getItem('theme')
+    }
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      return 'dark';
+    }
+    return 'light';
+  })()
+
+  if (theme === 'light') {
+    document.documentElement.classList.remove('dark');
+  } else {
+    document.documentElement.classList.add('dark')
+  }
+</script>
 
 <!-- Primary Meta Tags -->
 <title set:html={smartypants(title, 1)}></title>
