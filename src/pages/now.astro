@@ -1,13 +1,11 @@
 ---
-  import BaseLayout from '../layouts/BaseLayout.astro';
-  import '../styles/base.css';
-  import ThemeToggle from '../components/Navbar/ThemeToggle.jsx'
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="Welcome to Astro.">
-  <main>
-    <p class='text-tomato-12'>Test</p>
-    <p class="font-display text-lg font-bold">This is a test of Inter Display.</p>
-    <ThemeToggle client:load />
-  </main>
+  <div class="md:pt-6 text-gray-12 md:w-[26rem]">
+    <h1 class="pb-2 text-3xl font-bold font-display">Jeffrey Yao</h1>
+    <h2 class="pb-2 text-gray-11">First year CS student at UNSW Sydney</h2>
+    <p>Building beautiful, performant things that scratch the itch to create and learn.</p>
+  </div>
 </BaseLayout>

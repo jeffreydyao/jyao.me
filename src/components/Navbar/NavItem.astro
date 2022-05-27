@@ -1,11 +1,11 @@
 ---
-  import cn from 'classnames'
-  const { href, text } = Astro.props
-  const currentPath = Astro.canonicalURL.pathname
-  const isActive = currentPath === href
+import cn from 'classnames'
+const { href, text } = Astro.props
+const currentPath = Astro.canonicalURL.pathname
+const isActive = currentPath === href
 ---
 
 <a href={href} class={ cn(isActive ? 'font-semibold text-gray-12' : 'font-regular text-gray-11'
-  , 'hidden md:inline-block' ) }>
+  , 'hidden md:inline-block transition-all hover:bg-green-4 px-2 py-1 rounded-lg' ) }>
   {text}
 </a>

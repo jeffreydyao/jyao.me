@@ -32,20 +32,23 @@ import MobileMenu from "../components/Navbar/MobileMenu"
   </script>
 </head>
 
-<body class="bg-gray-2 flex flex-col items-center">
-  <div class="md:pt-12 justify-between md:w-[672px] w-full px-8 pt-8 flex items-center">
+<body class="flex flex-col items-center bg-gray-2">
+  <nav class="md:pt-12 justify-between md:w-[52rem] w-full px-8 py-8 flex items-center">
     <MobileMenu client:media="(max-width: 768px)" />
-    <div class="md:flex gap-8 hidden">
+    <div class="hidden gap-4 ml-[-0.405rem] md:flex">
       <NavItem href="/" text="Home" />
-      <NavItem href="/blog" text="Blog" />
-      <NavItem href="/projects" text="Projects" />
-      <NavItem href="/now" text="Now" />
-      <NavItem href="/about" text="About" />
+      <NavItem href="/blog/" text="Blog" />
+      <NavItem href="/projects/" text="Projects" />
+      <NavItem href="/now/" text="Now" />
+      <NavItem href="/about/" text="About" />
     </div>
 
     <ThemeToggle client:load />
-  </div>
-  <slot />
+  </nav>
+
+  <main class="md:w-[52rem] w-full px-8">
+    <slot />
+  </main>
 </body>
 
 </html>

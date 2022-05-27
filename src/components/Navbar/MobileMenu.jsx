@@ -1,4 +1,4 @@
-import { createEffect, createSignal, onCleanup, Show } from "solid-js";
+import { createEffect, createSignal, Show } from "solid-js";
 import { animate, stagger } from "motion";
 import { Motion, Presence } from "@motionone/solid";
 
@@ -31,12 +31,12 @@ export default function MobileMenu() {
   return (
     <>
       <button
-        class="tham tham-e-squeeze tham-w-4 md:hidden z-50"
+        class="tham tham-e-squeeze tham-w-4  md:hidden z-50"
         classList={{ "tham-active": isMenuOpen() }}
         onClick={toggleMenu}
       >
-        <div class="tham-box">
-          <div class="tham-inner" />
+        <div class="tham-box ">
+          <div class="tham-inner bg-gray-12" />
         </div>
       </button>
       <Presence>
@@ -47,7 +47,7 @@ export default function MobileMenu() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.155 }}
             id="menu-root"
-            class="absolute top-0 left-0 w-screen h-screen text-md font-medium pt-24 px-8 bg-gray-3 z-10 flex flex-col gap-4"
+            class="absolute top-0 left-0 w-screen h-screen text-md font-medium text-gray-12 pt-24 px-8 bg-gray-3 z-10 flex flex-col gap-4"
           >
             <li>
               <a href="/">Home</a>
