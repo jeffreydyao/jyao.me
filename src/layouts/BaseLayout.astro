@@ -1,9 +1,9 @@
 ---
-  import BaseHead from "../components/BaseHead.astro";
-  import '../styles/base.css';
-  import NavItem from "../components/Navbar/NavItem.astro";
-  import ThemeToggle from "../components/Navbar/ThemeToggle";
-  import MobileMenu from "../components/Navbar/MobileMenu"
+import BaseHead from "../components/BaseHead.astro";
+import '../styles/base.css';
+import NavItem from "../components/Navbar/NavItem.astro";
+import ThemeToggle from "../components/Navbar/ThemeToggle";
+import MobileMenu from "../components/Navbar/MobileMenu"
 ---
 
 <!DOCTYPE html>
@@ -39,6 +39,8 @@
       <NavItem href="/" text="Home" />
       <NavItem href="/blog" text="Blog" />
       <NavItem href="/projects" text="Projects" />
+      <NavItem href="/now" text="Now" />
+      <NavItem href="/about" text="About" />
     </div>
 
     <ThemeToggle client:load />

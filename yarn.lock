@@ -384,7 +384,7 @@
     "@motionone/utils" "^10.9.0"
     tslib "^2.3.1"
 
-"@motionone/dom@^10.9.0":
+"@motionone/dom@^10.8.0", "@motionone/dom@^10.9.0":
   version "10.9.0"
   resolved "https://registry.yarnpkg.com/@motionone/dom/-/dom-10.9.0.tgz#b53089da3f8e971a13c2eacd6abe61268b175246"
   integrity sha512-qRos6v/qgFRmCv9D4zAl5BJUvTKP0xBmK/SoHKh7TGKcpVDTvXsYEF8CaZQ72dy97s/fITnvqpMmcGI0lYouMQ==
@@ -420,6 +420,14 @@
   dependencies:
     "@motionone/dom" "^10.9.0"
     hey-listen "^1.0.8"
+    tslib "^2.3.1"
+
+"@motionone/solid@10.8.0":
+  version "10.8.0"
+  resolved "https://registry.yarnpkg.com/@motionone/solid/-/solid-10.8.0.tgz#81b12c5711d65c837de3986fc18bc80f4ee6b9b2"
+  integrity sha512-3yajaSxDwzay7IK4aR654T+d3kWm9B8EXDmvy7TcddaQFLOzjv5CKaIICGblnC9ZQ+Ca3foRQeJgLziNhow8LQ==
+  dependencies:
+    "@motionone/dom" "^10.8.0"
     tslib "^2.3.1"
 
 "@motionone/svelte@^10.9.0":
