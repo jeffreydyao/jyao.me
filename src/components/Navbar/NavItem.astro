@@ -1,8 +1,9 @@
 ---
 import cn from 'classnames'
 const { href, text } = Astro.props
-const currentPath = Astro.canonicalURL.pathname
-const isActive = currentPath === href
+// Astro returns full pathname - extract root.
+const rootPath = Astro.canonicalURL.pathname.split('/')[1]
+const isActive = rootPath === href.split('/')[1]
 ---
 
 <a href={href} class={ cn(isActive ? 'font-semibold text-gray-12' : 'font-regular text-gray-11'
