@@ -13,7 +13,7 @@ setup: |
 
 ---
 
-<Picture src='/me.png' alt='A picture of me on my 20th birthday' width={192}  />
+<Picture src='/me.png' alt='A photo of me on my 20th birthday' width={192} preload="webp"  />
 
 Hi! I'm Jeffrey Yao, a first-year Computer Science student at [UNSW Sydney](https://www.unsw.edu.au/) and incoming Software Engineer intern at [Bukalapak's](https://en.wikipedia.org/wiki/Bukalapak) new Sydney engineering office this summer. In a previous life, I spent two years studying Mechanical / Biomedical Engineering before switching to the dark side. I'm passionate about optimisation, health-tech and augmented reality which I think may change the way we experience the world.
 
