@@ -1,0 +1,21 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import TitleBlock from '../components/TitleBlock.astro';
+const { content } = Astro.props;
+---
+
+<BaseLayout
+  title="Now"
+  description={`Updated ${content.date}, from ${content.location}.`}
+>
+  <TitleBlock
+    title="Now"
+    subtitle={`Updated ${content.date}, from ${content.location}.`}
+  />
+
+  <article
+    class="prose prose-headings:md dark:prose-invert prose-code:before:content-none prose-code:after:content-none prose-lead:"
+  >
+    <slot />
+  </article>
+</BaseLayout>

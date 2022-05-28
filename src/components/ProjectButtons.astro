@@ -1,0 +1,84 @@
+---
+import cn from 'classnames'
+const { color, cta, secondary } = Astro.props
+const colors = {
+  tomato: {
+    cta: 'bg-gradient-to-r to-tomato-9 from-tomato-8 hover:to-tomato-10  text-white',
+    secondary: 'bg-tomato-4 hover:bg-tomato-5 text-tomato-11'
+  },
+  red: {
+    cta: 'bg-gradient-to-r to-red-9 from-red-8 hover:to-crimson-10 text-white',
+    secondary: 'bg-red-4 hover:bg-red-5 text-red-11'
+  },
+  crimson: {
+    cta: 'bg-gradient-to-r to-crimson-9 from-crimson-8 hover:to-crimson-10  text-white',
+    secondary: 'bg-crimson-4 hover:bg-crimson-5 text-crimson-11'
+  },
+  pink: {
+    cta: 'bg-gradient-to-r to-pink-9 from-pink-8 hover:to-pink-10  text-white',
+    secondary: 'bg-pink-4 hover:bg-pink-5 text-pink-11'
+  },
+  plum: {
+    cta: 'bg-gradient-to-r to-plum-9 from-plum-8 hover:to-plum-10 text-white',
+    secondary: 'bg-plum-4 hover:bg-plum-5 text-plum-11'
+  },
+  purple: {
+    cta: 'bg-gradient-to-r to-purple-9 from-purple-8 hover:to-purple-10  text-white',
+    secondary: 'bg-purple-4 hover:bg-purple-5 text-purple-11'
+  },
+  violet: {
+    cta: 'bg-gradient-to-r to-violet-9 from-violet-8 hover:to-violet-10  text-white',
+    secondary: 'bg-violet-4 hover:bg-violet-5 text-violet-11'
+  },
+  indigo: {
+    cta: 'bg-gradient-to-r to-indigo-9 from-indigo-8 hover:to-indigo-10  text-white',
+    secondary: 'bg-indigo-4 hover:bg-indigo-5 text-indigo-11'
+  },
+  blue: {
+    cta: 'bg-gradient-to-r to-blue-9 from-blue-8 hover:to-blue-10  text-white',
+    secondary: 'bg-blue-4 hover:bg-blue-5 text-blue-11'
+  },
+  cyan: {
+    cta: 'bg-gradient-to-r to-cyan-9 from-cyan-8 hover:to-cyan-10  text-white',
+    secondary: 'bg-cyan-4 hover:bg-cyan-5 text-cyan-11'
+  },
+  teal: {
+    cta: 'bg-gradient-to-r to-teal-9 from-teal-8 hover:to-teal-10  text-white',
+    secondary: 'bg-teal-4 hover:bg-teal-5 text-teal-11'
+  },
+  green: {
+    cta: 'bg-gradient-to-r to-green-9 hover:to-green-10 from-green-8 text-white',
+    secondary: 'bg-green-4 hover:bg-green-5 text-green-11'
+  },
+  orange: {
+    cta: 'bg-gradient-to-r to-orange-9 hover:to-orange-10 from-orange-8 text-white',
+    secondary: 'bg-orange-4 hover:bg-orange-5 text-orange-11'
+  },
+  brown: {
+    cta: 'bg-gradient-to-r to-brown-9 hover:to-brown-10  from-brown-8 text-white',
+    secondary: 'bg-brown-4 hover:bg-brown-5 text-brown-11'
+  },
+};
+const base = 'px-5 py-2 font-semibold rounded-full transition-all flex flex-none gap-2 w-max items-center'
+const buttonClass = {
+  cta: cn(base, colors[color].cta),
+  secondary: cn(base, colors[color].secondary)
+}
+---
+
+<div
+  class="flex gap-6 mb-16 md:mt-[-1rem] absolute md:static left-1/2 md:left-0 md:translate-x-0 translate-x-[-50%] py-4 px-5 md:py-0 md:px-0 md:rounded-none md:bg-transparent md:drop-shadow-none rounded-3xl bg-gray-1 dark:drop-shadow-none dark:bg-gray-2 dark:md:bg-transparent items-center bottom-0 drop-shadow-xl">
+  {cta !== 'none' && <a href={cta.url}>
+    <button class={buttonClass.cta}>
+      <span>{cta.title}</span>
+      <span>-></span>
+    </button>
+  </a>}
+
+  {secondary !== 'none' && <a href={secondary.url}>
+    <button class={buttonClass.secondary}>
+      <span>{secondary.title}</span>
+      <span>↗</span>
+    </button>
+  </a>}
+</div>

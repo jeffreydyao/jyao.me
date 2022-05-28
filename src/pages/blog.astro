@@ -1,0 +1,20 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TitleBlock from "../components/TitleBlock.astro";
+const posts = await Astro.glob('../pages/blog/*.md')
+const sortedPosts = posts.sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date))
+const options = { day: 'numeric', month: 'short', year: 'numeric' }
+---
+
+<BaseLayout title="Blog" description="Here, I share my thoughts and learnings.">
+  <TitleBlock title='Blog' subtitle='Here, I share my thoughts and learnings.' />
+
+  {sortedPosts.map((post) => (
+  <a href={post.url}>
+    <h3 class="mb-1 text-xl font-semibold font-display text-gray-12">{post.frontmatter.title}</h3>
+    <p class="mb-2 text-gray-12">{post.frontmatter.desc}</p>
+    <p class="mb-8 text-gray-11">{new Date(post.frontmatter.date).toLocaleString('en-AU', options)}</p>
+  </a>
+
+  ))}
+</BaseLayout>
