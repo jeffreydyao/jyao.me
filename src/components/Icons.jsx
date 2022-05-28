@@ -21,28 +21,3 @@ export const Sun = (
     <path d="M193.1,70.9a7.8,7.8,0,0,0,5.6-2.3l14.2-14.1a8.1,8.1,0,0,0-11.4-11.4L187.4,57.3a8,8,0,0,0,0,11.3A7.8,7.8,0,0,0,193.1,70.9Z"></path>
   </svg>
 );
-
-export const ArrowUpRight = (
-  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 256 256">
-    <rect width="256" height="256" fill="none"></rect>
-    <line
-      x1="64"
-      y1="192"
-      x2="192"
-      y2="64"
-      fill="none"
-      stroke="#000000"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="24"
-    ></line>
-    <polyline
-      points="88 64 192 64 192 168"
-      fill="none"
-      stroke="#000000"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="24"
-    ></polyline>
-  </svg>
-);

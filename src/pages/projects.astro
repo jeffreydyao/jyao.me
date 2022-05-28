@@ -12,12 +12,16 @@ const projects = await Astro.glob('../pages/projects/*.md')
 
   <div class="flex flex-col gap-12 md:gap-16 md:grid md:grid-cols-2">
     {projects.map((project) => (
-    <a href={project.url}>
-      <h3 class="mb-1 text-xl font-semibold text-gray-12 font-display">{project.frontmatter.name}</h3>
-      <p class="mb-3 text-gray-11">{project.frontmatter.date}</p>
-      <p class="mb-8 text-gray-12">{project.frontmatter.description}</p>
+    <a href={project.url} class='flex flex-col justify-between'>
+      <div>
+        <h3 class="mb-1 text-xl font-semibold text-gray-12 font-display">{project.frontmatter.name}</h3>
+        <p class="mb-3 text-gray-11">{project.frontmatter.date}</p>
+        <p class="mb-8 text-gray-12">{project.frontmatter.desc}</p>
+      </div>
+
       <Img src={project.frontmatter.cover} alt={`Screenshot of ${project.frontmatter.name}`} attributes={{ img: {
         class: 'rounded-2xl' } }} />
+
     </a>
     ))}
   </div>
