@@ -4,8 +4,8 @@ import TitleBlock from "../components/TitleBlock.astro";
 const { content } = Astro.props;
 ---
 
-<BaseLayout title='Now' description={`Updated ${content.date}, from ${content.location}.`}>
-  <TitleBlock title='Now' subtitle={`Updated ${content.date}, from ${content.location}.`} />
+<BaseLayout title={content.name} description={content.description}>
+  <TitleBlock title={content.name} subtitle={content.date} />
 
   <article
     class="prose prose-headings:md dark:prose-invert prose-code:before:content-none prose-code:after:content-none prose-lead:">

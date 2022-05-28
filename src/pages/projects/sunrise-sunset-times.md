@@ -2,7 +2,9 @@
 name: Sunrise / Sunset Times
 date: April 2022
 description: A Raycast extension for viewing sunrise / sunset times at your current location.
-image: "/sunrise.png"
+cover: "/sunrise.png"
+layout: ../../layouts/ProjectLayout.astro
+cta: ["GitHub", "https://github.com/jeffreydyao/sunrise-sunset-times"]
 ---
 
 A Raycast extension that lets you check sunrise / sunset times for dates up to a month from now.

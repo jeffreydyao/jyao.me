@@ -5,7 +5,8 @@ import { Img } from 'astro-imagetools/components'
 const projects = await Astro.glob('../pages/projects/*.md')
 ---
 
-<BaseLayout title="Welcome to Astro.">
+<BaseLayout title="Projects"
+  description="'I’ve found that the best way of learning is through building. Here’re the things that I’ve built - small, big, for fun and for learning.'">
   <TitleBlock title='Projects'
     subtitle='I’ve found that the best way of learning is through building. Here’re the things that I’ve built - small, big, for fun and for learning.' />
 
@@ -15,7 +16,7 @@ const projects = await Astro.glob('../pages/projects/*.md')
       <h3 class="mb-1 text-xl font-semibold text-gray-12 font-display">{project.frontmatter.name}</h3>
       <p class="mb-3 text-gray-11">{project.frontmatter.date}</p>
       <p class="mb-8 text-gray-12">{project.frontmatter.description}</p>
-      <Img src={project.frontmatter.image} alt={`Screenshot of ${project.frontmatter.name}`} attributes={{ img: {
+      <Img src={project.frontmatter.cover} alt={`Screenshot of ${project.frontmatter.name}`} attributes={{ img: {
         class: 'rounded-2xl' } }} />
     </a>
     ))}

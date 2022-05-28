@@ -2,7 +2,8 @@
 name: Greenways
 date: February 2022
 description: 2nd place at UNIHACK ‘22. Visualises Australia-wide carbon footprint data.
-image: "/grnwys.png"
+cover: "/grnwys.png"
+layout: ../../layouts/ProjectLayout.astro
 ---
 
 A Raycast extension that lets you check sunrise / sunset times for dates up to a month from now.

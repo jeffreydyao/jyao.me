@@ -6,7 +6,7 @@ const sortedPosts = posts.sort((a, b) => new Date(b.frontmatter.date) - new Date
 const options = { day: 'numeric', month: 'short', year: 'numeric' }
 ---
 
-<BaseLayout title="Welcome to Astro.">
+<BaseLayout title="Blog" description="Here, I share my thoughts and learnings.">
   <TitleBlock title='Blog' subtitle='Here, I share my thoughts and learnings.' />
 
   {sortedPosts.map((post) => (
