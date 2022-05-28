@@ -686,7 +686,7 @@
     "@motionone/utils" "^10.9.0"
     tslib "^2.3.1"
 
-"@motionone/dom@^10.8.0", "@motionone/dom@^10.9.0":
+"@motionone/dom@^10.9.0":
   version "10.9.0"
   resolved "https://registry.yarnpkg.com/@motionone/dom/-/dom-10.9.0.tgz#b53089da3f8e971a13c2eacd6abe61268b175246"
   integrity sha512-qRos6v/qgFRmCv9D4zAl5BJUvTKP0xBmK/SoHKh7TGKcpVDTvXsYEF8CaZQ72dy97s/fITnvqpMmcGI0lYouMQ==
@@ -724,12 +724,13 @@
     hey-listen "^1.0.8"
     tslib "^2.3.1"
 
-"@motionone/solid@10.8.0":
-  version "10.8.0"
-  resolved "https://registry.yarnpkg.com/@motionone/solid/-/solid-10.8.0.tgz#81b12c5711d65c837de3986fc18bc80f4ee6b9b2"
-  integrity sha512-3yajaSxDwzay7IK4aR654T+d3kWm9B8EXDmvy7TcddaQFLOzjv5CKaIICGblnC9ZQ+Ca3foRQeJgLziNhow8LQ==
+"@motionone/solid@^10.9.0":
+  version "10.9.0"
+  resolved "https://registry.yarnpkg.com/@motionone/solid/-/solid-10.9.0.tgz#811c3fe17cdbe177d66dbfa40e7097df11546bab"
+  integrity sha512-JyqCt46b0MaDD0fF/odrJwuw224TUtSaYNOXev9/5/HYr0GAhjKLXS2OTiTcwgWnRXbyKcLK1VBhfIlubC3RcA==
   dependencies:
-    "@motionone/dom" "^10.8.0"
+    "@motionone/dom" "^10.9.0"
+    "@solid-primitives/props" "^2.1.1"
     tslib "^2.3.1"
 
 "@motionone/svelte@^10.9.0":
@@ -802,6 +803,18 @@
   integrity sha512-Ex1sL2BxU+g8MHdAdq9SZKz+pU34o8Zcl9PHWo2WaG9hrnlZme607PU6gnpoAYsDBpHX327+eu60wWUk+d/b+A==
   dependencies:
     tsm "^2.1.4"
+
+"@solid-primitives/props@^2.1.1":
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/@solid-primitives/props/-/props-2.1.2.tgz#7d0960e2b0ecd547126826744152d35156827bb5"
+  integrity sha512-QBvflWiTFveihqHe/Q40Q4kDLf6VYvi53czSzkwhPH+9pQoIjqCwgmAOggihPQVRJ401gFN27ok6LiwxNYTizA==
+  dependencies:
+    "@solid-primitives/utils" "^2.0.0"
+
+"@solid-primitives/utils@^2.0.0":
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/@solid-primitives/utils/-/utils-2.0.3.tgz#0eb76a7b599a91e7d521377580dee56bfa4e16f1"
+  integrity sha512-dIv339WSJZ8C50kcJ7Ys5aLPSs59+GMsSrtJ/bGnA38gkLgmKry1XIZJLAUVz/uiOiZ661GUJ+IMngsqG8u09g==
 
 "@tailwindcss/typography@^0.5.2":
   version "0.5.2"

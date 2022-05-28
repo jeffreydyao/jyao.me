@@ -5,7 +5,7 @@ import ThemeToggle from "./ThemeToggle";
 ---
 
 <nav class="md:pt-12 justify-between md:w-[52rem] w-full px-8 py-8 flex items-center">
-  <MobileMenu client:media="(max-width: 768px)" />
+  <MobileMenu client:only="solid-js" />
   <div class="hidden gap-4 ml-[-0.405rem] md:flex">
     <NavItem href="/" text="Home" />
     <NavItem href="/blog/" text="Blog" />
