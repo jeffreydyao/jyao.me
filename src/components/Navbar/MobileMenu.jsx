@@ -1,6 +1,6 @@
-import { createEffect, createSignal, Show } from "solid-js";
-import { animate, stagger } from "motion";
-import { Motion, Presence } from "@motionone/solid";
+import { createEffect, createSignal, Show } from 'solid-js';
+import { animate, stagger } from 'motion';
+import { Motion, Presence } from '@motionone/solid';
 
 export default function MobileMenu() {
   const [isMenuOpen, setIsMenuOpen] = createSignal(false);
@@ -19,12 +19,20 @@ export default function MobileMenu() {
 
   createEffect(() => {
     if (isMenuOpen()) {
-      const menu = document.getElementById("menu-root");
-      const titles = menu.querySelectorAll("li");
-      const separators = menu.querySelectorAll("div");
+      const menu = document.getElementById('menu-root');
+      const titles = menu.querySelectorAll('li');
+      const separators = menu.querySelectorAll('div');
 
-      animate(titles, { opacity: [0, "100%"] }, { duration: 0.415, delay: stagger(0.115) });
-      animate(separators, { width: [0, "100%"] }, { duration: 0.465, delay: stagger(0.16) });
+      animate(
+        titles,
+        { opacity: [0, '100%'] },
+        { duration: 0.415, delay: stagger(0.115) }
+      );
+      animate(
+        separators,
+        { width: [0, '100%'] },
+        { duration: 0.465, delay: stagger(0.16) }
+      );
     }
   });
 
@@ -32,9 +40,9 @@ export default function MobileMenu() {
     <>
       <button
         class="tham tham-e-squeeze tham-w-4  md:hidden z-50"
-        classList={{ "tham-active": isMenuOpen() }}
+        classList={{ 'tham-active': isMenuOpen() }}
         onClick={toggleMenu}
-        aria-label={isMenuOpen() ? "Close menu" : "Open menu"}
+        aria-label={isMenuOpen() ? 'Close menu' : 'Open menu'}
       >
         <div class="tham-box ">
           <div class="tham-inner bg-gray-12" />

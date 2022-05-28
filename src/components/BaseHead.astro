@@ -1,24 +1,23 @@
 ---
 import { smartypants } from 'smartypants';
 
-const { canonicalURL = Astro.canonicalURL } = Astro.props
-const image = new URL(Astro.props.image || './social.png', Astro.site)
-const description = Astro.props.description || 'Building beautiful, performant things that scratch the itch to create and learn.'
+const { canonicalURL = Astro.canonicalURL } = Astro.props;
+const image = new URL(Astro.props.image || './social.png', Astro.site);
+const description =
+  Astro.props.description ||
+  'Building beautiful, performant things that scratch the itch to create and learn.';
 
-const title = [Astro.props.title, 'Jeffrey Yao']
-  .filter(Boolean)
-  .join(' | ')
-
+const title = [Astro.props.title, 'Jeffrey Yao'].filter(Boolean).join(' | ');
 ---
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#299764">
-<meta name="theme_color" content="#299764">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="mask-icon" href="/favicon.svg" color="#30A46C">
-<link rel="sitemap" href="/sitemap.xml">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#299764" />
+<meta name="theme_color" content="#299764" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="mask-icon" href="/favicon.svg" color="#30A46C" />
+<link rel="sitemap" href="/sitemap.xml" />
 
 <!-- Preload -->
 <slot name="preload" />
@@ -29,18 +28,18 @@ const title = [Astro.props.title, 'Jeffrey Yao']
   // Respect localStorage preference first then system.
   const theme = (() => {
     if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-      return localStorage.getItem('theme')
+      return localStorage.getItem('theme');
     }
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
       return 'dark';
     }
     return 'light';
-  })()
+  })();
 
   if (theme === 'light') {
     document.documentElement.classList.remove('dark');
   } else {
-    document.documentElement.classList.add('dark')
+    document.documentElement.classList.add('dark');
   }
 </script>
 

@@ -1,12 +1,17 @@
 ---
-import cn from 'classnames'
-const { href, text } = Astro.props
+import cn from 'classnames';
+const { href, text } = Astro.props;
 // Astro returns full pathname - extract root.
-const rootPath = Astro.canonicalURL.pathname.split('/')[1]
-const isActive = rootPath === href.split('/')[1]
+const rootPath = Astro.canonicalURL.pathname.split('/')[1];
+const isActive = rootPath === href.split('/')[1];
 ---
 
-<a href={href} class={ cn(isActive ? 'font-semibold text-gray-12' : 'font-regular text-gray-11'
-  , 'hidden md:inline-block transition-all hover:bg-green-4 px-2 py-1 rounded-lg' ) }>
+<a
+  {href}
+  class={cn(
+    isActive ? 'font-semibold text-gray-12' : 'font-regular text-gray-11',
+    'hidden md:inline-block transition-all hover:bg-green-4 px-2 py-1 rounded-lg'
+  )}
+>
   {text}
 </a>

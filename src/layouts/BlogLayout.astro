@@ -1,14 +1,16 @@
 ---
-import BaseLayout from "./BaseLayout.astro";
+import BaseLayout from './BaseLayout.astro';
 const { content } = Astro.props;
-const options = { day: 'numeric', month: 'short', year: 'numeric' }
+const options = { day: 'numeric', month: 'short', year: 'numeric' };
 ---
 
 <BaseLayout title={content.title} description={content.desc}>
   <div class="md:mt-6 text-gray-12">
     <h1 class="mb-2 text-3xl font-bold font-display">{content.title}</h1>
     <!-- TODO: Add reading time -->
-    <h2 class="mb-10 text-gray-11">{new Date(content.date).toLocaleString('en-AU', options)}</h2>
+    <h2 class="mb-10 text-gray-11">
+      {new Date(content.date).toLocaleString('en-AU', options)}
+    </h2>
   </div>
   <article class="prose prose-headings:md dark:prose-invert">
     <slot />
