@@ -1,7 +1,7 @@
 ---
 import CarouselLayout from "../layouts/CarouselLayout.astro";
 const allPosts = await Astro.glob('../pages/blog/*.md')
-const recentPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date)).slice(0, 5)
+const recentPosts = allPosts.filter(post => post.frontmatter.draft == undefined).sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date)).slice(0, 5)
 const options = { day: 'numeric', month: 'short', year: 'numeric' }
 ---
 

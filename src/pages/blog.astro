@@ -2,7 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import TitleBlock from "../components/TitleBlock.astro";
 const posts = await Astro.glob('../pages/blog/*.md')
-const sortedPosts = posts.sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date))
+const sortedPosts = posts.filter(post => post.frontmatter.draft == undefined).sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date))
 const options = { day: 'numeric', month: 'short', year: 'numeric' }
 ---
 
