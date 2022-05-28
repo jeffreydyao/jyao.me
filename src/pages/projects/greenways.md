@@ -4,7 +4,7 @@ date: February 2022
 description: 2nd place at UNIHACK ‘22. Visualises Australia-wide carbon footprint data.
 cover: "/grnwys.png"
 layout: ../../layouts/ProjectLayout.astro
-color: purple
+color: green
 cta: { title: "GitHub", url: "https://github.com/jeffreydyao/sunrise-sunset-times" }
 secondary: none
 ---
