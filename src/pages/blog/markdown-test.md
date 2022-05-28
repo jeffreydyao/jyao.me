@@ -1,8 +1,9 @@
 ---
 title: Markdown support test
 desc: An article testing GFM flavoured syntax.
-date: 2023-05-20
+date: 2012-12-12
 layout: ../../layouts/BlogLayout.astro
+draft: true
 ---
 
 # Headings
