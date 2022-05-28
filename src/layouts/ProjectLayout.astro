@@ -5,7 +5,7 @@ import ProjectButtons from "../components/ProjectButtons.astro";
 const { content } = Astro.props;
 ---
 
-<BaseLayout title={content.name} description={content.description}>
+<BaseLayout title={content.name} description={content.desc} image={content.cover}>
   <TitleBlock title={content.name} subtitle={content.date} />
   <ProjectButtons color={content.color} cta={content.cta} secondary={content.secondary} />
 

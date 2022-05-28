@@ -42,6 +42,11 @@ module.exports = {
     }
   },
   darkmode: "class",
-  plugins: [require("@tailwindcss/typography"), require("tailwind-hamburgers")],
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/line-clamp"),
+    require("tailwind-scrollbar-hide"),
+    require("tailwind-hamburgers")
+  ],
   presets: [require("windy-radix-palette")]
 }

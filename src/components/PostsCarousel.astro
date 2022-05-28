@@ -1,0 +1,19 @@
+---
+import CarouselLayout from "../layouts/CarouselLayout.astro";
+const allPosts = await Astro.glob('../pages/blog/*.md')
+const recentPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date)).slice(0, 5)
+const options = { day: 'numeric', month: 'short', year: 'numeric' }
+---
+
+<CarouselLayout>
+  {recentPosts.map((post) => (
+  <a class="flex flex-none mt-4 mb-12 flex-col justify-between px-6 py-6 transition-all duration-[245ms] ease-out shadow-lg w-64 h-72 rounded-2xl bg-gray-1 hover:translate-y-[-0.835rem] hover:shadow-gray-5 shadow-gray-6 hover:shadow-xl dark:shadow-none dark:bg-gray-3"
+    href={post.url}>
+    <div>
+      <h4 class="mb-3 font-semibold text-gray-12">{post.frontmatter.title}</h4>
+      <span class="line-clamp-4 text-gray-12">{post.frontmatter.desc}</span>
+    </div>
+    <span class="text-gray-11">{new Date(post.frontmatter.date).toLocaleString('en-AU', options)}</span>
+  </a>
+  ))}
+</CarouselLayout>

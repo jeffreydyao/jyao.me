@@ -1,7 +1,8 @@
 ---
 name: Greenways
 date: February 2022
-description: 2nd place at UNIHACK ‘22. Visualises Australia-wide carbon footprint data.
+desc: 2nd place at UNIHACK ‘22. Visualises Australia-wide carbon footprint data.
+featured: true
 cover: "/grnwys.png"
 layout: ../../layouts/ProjectLayout.astro
 color: green

@@ -34,6 +34,7 @@ export default function MobileMenu() {
         class="tham tham-e-squeeze tham-w-4  md:hidden z-50"
         classList={{ "tham-active": isMenuOpen() }}
         onClick={toggleMenu}
+        aria-label={isMenuOpen() ? "Close menu" : "Open menu"}
       >
         <div class="tham-box ">
           <div class="tham-inner bg-gray-12" />

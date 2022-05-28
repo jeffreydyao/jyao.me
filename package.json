@@ -17,14 +17,15 @@
   },
   "dependencies": {
     "@motionone/solid": "^10.9.0",
+    "@tailwindcss/line-clamp": "^0.4.0",
     "@tailwindcss/typography": "^0.5.2",
-    "astro-icon": "^0.7.1",
     "astro-imagetools": "^0.6.9",
     "classnames": "^2.3.1",
     "motion": "^10.9.0",
     "postcss-import": "^14.1.0",
     "smartypants": "^0.1.6",
     "tailwind-hamburgers": "^1.2.2",
+    "tailwind-scrollbar-hide": "^1.1.7",
     "windy-radix-palette": "^0.1.1"
   }
 }

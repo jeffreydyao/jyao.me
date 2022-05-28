@@ -1,7 +1,8 @@
 ---
 name: Sunrise / Sunset Times
 date: April 2022
-description: A Raycast extension for viewing sunrise / sunset times at your current location.
+desc: A Raycast extension for viewing sunrise / sunset times at your current location.
+featured: true
 cover: "/sunrise.png"
 layout: ../../layouts/ProjectLayout.astro
 color: green

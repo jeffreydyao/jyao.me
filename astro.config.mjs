@@ -20,10 +20,5 @@ export default defineConfig({
     }),
     solid(),
     astroImageTools
-  ],
-  vite: {
-    ssr: {
-      external: ["svgo"]
-    }
-  }
+  ]
 })

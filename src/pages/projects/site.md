@@ -1,7 +1,8 @@
 ---
 name: jyao.me
 date: May 2022
-description: A refactor of my site to Astro and Solid, with an eye on performance.
+desc: A refactor of my site to Astro and Solid, with an eye on performance.
+featured: false
 cover: "/social.png"
 layout: ../../layouts/ProjectLayout.astro
 color: green
