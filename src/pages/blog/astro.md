@@ -3,6 +3,7 @@ title: How I rebuilt my site in Astro for speed
 desc: Learn why I switched from Next.js to Astro, how I did it, and what I did to make my site faster.
 date: 2022-05-31
 layout: ../../layouts/BlogLayout.astro
+draft: true
 ---
 # Why?
 I stumbled upon a new framework recently called [Astro](https://astro.build). Being interested in front-end, it was the perfect excuse to rebuild my site in the latest new framework 🤡. However, there were several reasons why it made sense. For context, my site was built using Next.js [previously](https://jyao-me-q5ih6bj3o-jeffreydyao.vercel.app).
