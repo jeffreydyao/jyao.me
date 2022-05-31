@@ -14,7 +14,7 @@ const featuredProjects = allProjects.filter(project => project.frontmatter.featu
       <span class="line-clamp-4 text-gray-12">{project.frontmatter.desc}</span>
     </div>
     <div class='h-1/2'>
-      <Picture src={project.frontmatter.cover} alt={`Image of ${project.frontmatter.name}`} layout='fill' />
+      <Picture src={project.frontmatter.cover} alt={`Image of ${project.frontmatter.name}`} layout='fill' preload='webp' />
     </div>
 
   </a>
