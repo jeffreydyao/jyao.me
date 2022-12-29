@@ -1,3 +1,7 @@
 {
-  "extends": "astro/tsconfigs/strict"
+  "extends": "astro/tsconfigs/strict",
+  // https://docs.astro.build/en/guides/integrations-guide/image/#update-envdts
+  "compilerOptions": {
+    "types": ["@astrojs/image/client"]
+  }
 }
