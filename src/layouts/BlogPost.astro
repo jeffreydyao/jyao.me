@@ -1,0 +1,29 @@
+---
+import Layout from "./Layout.astro";
+import { Image } from "@astrojs/image/components";
+import profilePhoto from "../assets/me.jpeg";
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={frontmatter.title}>
+  <main class="flex flex-col items-start gap-16 px-8 py-16 md:px-12 md:py-24">
+    <div class="flex flex-col gap-4">
+      <button class="opacity-50">
+        <a href="/" class="flex items-center gap-2">
+          <span>← Home</span>
+        </a>
+      </button>
+      <header class="flex flex-col gap-4">
+        <h1>{frontmatter.title}</h1>
+        <div class="flex items-center gap-3">
+          <Image src={profilePhoto} width={60} class="w-5 rounded-full" alt="A photo of Jeffrey" />
+          <span class="opacity-50">Jeffrey Yao&nbsp;&nbsp;·&nbsp;&nbsp;{frontmatter.date}</span>
+        </div>
+      </header>
+    </div>
+    <article class="leading-loose prose prose-img:rounded-lg">
+      <slot />
+    </article>
+  </main>
+</Layout>

@@ -1,75 +1,105 @@
 ---
-import { Icon } from 'astro-icon';
-import { Image } from '@astrojs/image/components';
-import Layout from '../layouts/Layout.astro';
-import profilePhoto from '../assets/me.jpeg'
----
-<Layout title="Jeffrey Yao">
-	<main class="flex flex-col items-start gap-24 px-8 py-16 md:px-12 md:py-24">
-		<header class="flex flex-col gap-8">
-			<Image src={profilePhoto} width={144} class="w-[72px] rounded-full" alt="A photo of Jeffrey" />
-			<section class="flex flex-col gap-4">
-				<h1>Jeffrey Yao</h1>
-				<h2 class="opacity-75">Software Engineer at Relevance AI</h2>
-			</section>
-			
-			<section class="flex flex-col gap-4 leading-relaxed opacity-50">
-				<p>Crafting beautiful + intuitive features by day, studying Computer Science at UNSW by night.</p>
-				<p>In my spare time I gym, run, explore new places, build side projects and think about where to travel next.</p>
-			</section>
-	
-	
-			<section class="flex items-center gap-4">
-				<a href="https:/twitter.com/jeffdyao" target="_blank">
-					<button aria-label="Twitter profile">
-						<Icon name="twitter-logo" class="w-[15px]" />
-					</button>
-				</a>
-				<a href="https:/github.com/jeffreydyao" target="_blank">
-					<button aria-label="GitHub profile">
-						<Icon name="github-logo" class="w-[15px]" />
-					</button>
-				</a>
-				<a href="https:/twitter.com/jeffdyao" target="_blank">
-					<button aria-label="LinkedIn profile">
-						<Icon name="linkedin-logo" class="w-[15px]" />
-					</button>
-				</a>
-				<a href="https:/twitter.com/jeffdyao" target="_blank">
-					<button aria-label="Email">
-						<Icon name="envelope-closed" class="w-[15px]" />
-					</button>
-				</a>
-	
-			</section>
-		</header>
-	
-		<section class="grid grid-flow-row gap-8 md:gap-0 md:grid-flow-col">
-			<h3 class="w-44">Work</h3>
-			<div class="grid grid-flow-row gap-8 md:gap-14">
-				<div class="grid grid-flow-row gap-2 md:grid-flow-col md:gap-28">
-					<span class="opacity-50 w-28">2022 — Now</span>
-					<div class="flex flex-col max-w-md gap-6">
-						<div class="flex flex-col gap-1.5 md:gap-3">
-							<h4>Software Engineer at Relevance AI</h4>
-							<span class="opacity-50">Sydney, Australia</span>
-						</div>
-						<p class="opacity-50">Building Relevance AI's front-end and engineering internal tooling to improve team productivity as we scale from seed-stage to Series A.</p>
-					</div>
-				</div>
+import { Icon } from "astro-icon";
+import { Image } from "@astrojs/image/components";
+import Layout from "../layouts/Layout.astro";
+import profilePhoto from "../assets/me.jpeg";
 
-				<div class="grid grid-flow-row gap-2 md:grid-flow-col md:gap-28">
-					<span class="opacity-50 w-28">2022 — Now</span>
-					<div class="flex flex-col max-w-md gap-6">
-						<div class="flex flex-col gap-1.5 md:gap-3">
-							<h4>Development Intern at DIJTAL</h4>
-							<span class="opacity-50">Sydney, Australia</span>
-						</div>
-						<p class="opacity-50">Working with the Product and Front-End teams to build a web design system for internal applications and provide guidance for future direction.</p>
-					</div>
-				</div>
-			</div>
-			
-		</section>
-	</main>
+const posts = await Astro.glob("../pages/blog/*.md");
+const publishedPosts = posts.filter((p) => !p.frontmatter.draft);
+---
+
+<Layout title="Jeffrey Yao">
+  <main class="flex flex-col items-start gap-24 px-8 py-16 md:px-12 md:py-24">
+    <header class="flex flex-col gap-8">
+      <Image src={profilePhoto} width={144} class="w-[72px] rounded-full" alt="A photo of Jeffrey" />
+      <section class="flex flex-col gap-4">
+        <h1>Jeffrey Yao</h1>
+        <h2 class="opacity-75">Software Engineer at Relevance AI</h2>
+      </section>
+
+      <section class="flex flex-col gap-4 leading-relaxed opacity-50">
+        <p>Crafting beautiful + intuitive features by day, studying Computer Science at UNSW by night.</p>
+        <p>
+          In my spare time I gym, run, explore new places, build side projects and think about where to travel next.
+        </p>
+      </section>
+
+      <section class="flex items-center gap-4">
+        <a href="https:/twitter.com/jeffdyao" target="_blank">
+          <button aria-label="Twitter profile">
+            <Icon name="twitter-logo" class="w-[15px]" />
+          </button>
+        </a>
+        <a href="https:/github.com/jeffreydyao" target="_blank">
+          <button aria-label="GitHub profile">
+            <Icon name="github-logo" class="w-[15px]" />
+          </button>
+        </a>
+        <a href="https:/twitter.com/jeffdyao" target="_blank">
+          <button aria-label="LinkedIn profile">
+            <Icon name="linkedin-logo" class="w-[15px]" />
+          </button>
+        </a>
+        <a href="https:/twitter.com/jeffdyao" target="_blank">
+          <button aria-label="Email">
+            <Icon name="envelope-closed" class="w-[15px]" />
+          </button>
+        </a>
+      </section>
+    </header>
+
+    <section class="grid grid-flow-row gap-8 md:gap-0 md:grid-flow-col">
+      <h3 class="w-44">Blog</h3>
+      <div class="grid grid-flow-row gap-8 md:gap-14">
+        {
+          publishedPosts.map((p) => (
+            <div class="grid grid-flow-row gap-2 md:grid-flow-col md:gap-28">
+              <span class="opacity-50 w-28">{p.frontmatter.date}</span>
+              <div class="flex flex-col max-w-md gap-6">
+                <div class="flex flex-col gap-1.5 md:gap-3">
+                  <a href={p.url}>
+                    <h4>{p.frontmatter.title}</h4>
+                  </a>
+                  <p class="opacity-50">{p.frontmatter.description}</p>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="grid grid-flow-row gap-8 md:gap-0 md:grid-flow-col">
+      <h3 class="w-44">Work</h3>
+      <div class="grid grid-flow-row gap-8 md:gap-14">
+        <div class="grid grid-flow-row gap-2 md:grid-flow-col md:gap-28">
+          <span class="opacity-50 w-28">2022 — Now</span>
+          <div class="flex flex-col max-w-md gap-6">
+            <div class="flex flex-col gap-1.5 md:gap-3">
+              <h4>Software Engineer at Relevance AI</h4>
+              <span class="opacity-50">Sydney, Australia</span>
+            </div>
+            <p class="opacity-50">
+              Building Relevance AI's front-end and engineering internal tooling to improve team productivity as we
+              scale from seed-stage to Series A.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-flow-row gap-2 md:grid-flow-col md:gap-28">
+          <span class="opacity-50 w-28">2022 — Now</span>
+          <div class="flex flex-col max-w-md gap-6">
+            <div class="flex flex-col gap-1.5 md:gap-3">
+              <h4>Development Intern at DIJTAL</h4>
+              <span class="opacity-50">Sydney, Australia</span>
+            </div>
+            <p class="opacity-50">
+              Working with the Product and Front-End teams to build a web design system for internal applications and
+              provide guidance for future direction.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </Layout>
