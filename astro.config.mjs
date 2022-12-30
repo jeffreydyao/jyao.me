@@ -1,5 +1,5 @@
 import { defineConfig } from 'astro/config';
-import cappuccinTheme from './src/cappuccin-macchiato.json'
+import blulocoTheme from './src/bluloco-light.json'
 
 // https://astro.build/config
 import tailwind from "@astrojs/tailwind";
@@ -19,7 +19,7 @@ export default defineConfig({
   markdown: {
     remarkPlugins: [[astroLayouts, layoutOptions]],
     shikiConfig: {
-      theme: cappuccinTheme
+      theme: blulocoTheme
     }
   },
   integrations: [tailwind(), image(

@@ -2,12 +2,13 @@
 import Layout from "./Layout.astro";
 import { Image } from "@astrojs/image/components";
 import profilePhoto from "../assets/me.jpeg";
+import SocialLinks from "../components/SocialLinks.astro";
 
 const { frontmatter } = Astro.props;
 ---
 
 <Layout title={frontmatter.title}>
-  <main class="flex flex-col items-start gap-16 px-8 py-16 md:px-12 md:py-24">
+  <main class="flex flex-col items-start max-w-2xl gap-12 px-8 py-16 md:px-12 md:py-24">
     <div class="flex flex-col gap-4">
       <button class="opacity-50">
         <a href="/" class="flex items-center gap-2">
@@ -22,8 +23,15 @@ const { frontmatter } = Astro.props;
         </div>
       </header>
     </div>
-    <article class="leading-loose prose prose-img:rounded-lg">
+    <article
+      class="leading-loose prose prose-img:rounded-lg prose-code:!bg-gray-2 prose-code:!rounded-lg prose-code:px-1.5 prose-code:py-1 prose-code:prose-pre:!p-0 prose-code:font-normal prose-code:prose-pre:!bg-transparent prose-code:!text-[13px] prose-code:prose-pre:!text-sm prose-code:prose-pre:!rounded-none prose-pre:!bg-gray-2 prose-a:decoration-gray-6 prose-h1:text-xl prose-h1:font-bold prose-h2:text-xl prose-h2:font-semibold prose-h3:text-lg prose-h3:font-bold prose-h4:text-lg prose-h4:font-semibold prose-p:prose-blockquote:text-gray-11 prose-p:prose-blockquote:font-normal prose-blockquote:border-l-[3px] prose-hr:border-gray-6 hover:prose-a:opacity-75"
+    >
       <slot />
     </article>
+
+    <footer class="flex flex-col w-full gap-8">
+      <hr class="border-t border-gray-6" />
+      <SocialLinks />
+    </footer>
   </main>
 </Layout>

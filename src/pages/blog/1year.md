@@ -4,11 +4,50 @@ date: 25/12/2022
 description: Reflecting on my journey and advice for those starting out.
 ---
 
-This is normal text.
+This is normal text. This is normal text. This is normal text. This is normal text.
+This is normal text. This is normal text.
+This is normal text. This is normal text.
+This is normal text. This is normal text.
+This is normal text. This is normal text.
+This is normal text. This is normal text.
+This is normal text. This is normal text.
+This is normal text. This is normal text.
+This is normal text. This is normal text.
+This is normal text. This is normal text.
 
 # Heading 1
 
+This is normal text. This is normal text. This is normal text. This is normal text.
+This is normal text. This is normal text.
+This is normal text. This is normal text.
+This is normal text. This is normal text.
+This is normal text. This is normal text.
+This is normal text. This is normal text.
+This is normal text. This is normal text.
+This is normal text. This is normal text.
+This is normal text. This is normal text.
+This is normal text. This is normal text.
+
 ## Heading 2
+
+This is normal text. `This is normal text`. This is normal text. This is normal text.
+
+```ts
+const firstWord = "Hello";
+const secondWord = "World";
+
+console.log(firstWord + secondWord);
+```
+
+This is normal text. This is normal text.
+This is normal text. This is normal text.
+This is normal text. This is normal text.
+This is normal text. This is normal text.
+This is normal text. This is normal text.
+This is normal text. This is normal text.
+This is normal text. This is normal text.
+This is normal text. This is normal text.
+This is normal text. This is normal text.
 
 ### Heading 3
 
@@ -29,6 +68,8 @@ _This is italicized text_
 - Third item
 
 `This is a short fragment of code`
+
+I like `inline code`
 
 ```ts
 const firstWord = "Hello";

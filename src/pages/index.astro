@@ -3,6 +3,7 @@ import { Icon } from "astro-icon";
 import { Image } from "@astrojs/image/components";
 import Layout from "../layouts/Layout.astro";
 import profilePhoto from "../assets/me.jpeg";
+import SocialLinks from "../components/SocialLinks.astro";
 
 const posts = await Astro.glob("../pages/blog/*.md");
 const publishedPosts = posts.filter((p) => !p.frontmatter.draft);
@@ -24,28 +25,7 @@ const publishedPosts = posts.filter((p) => !p.frontmatter.draft);
         </p>
       </section>
 
-      <section class="flex items-center gap-4">
-        <a href="https:/twitter.com/jeffdyao" target="_blank">
-          <button aria-label="Twitter profile">
-            <Icon name="twitter-logo" class="w-[15px]" />
-          </button>
-        </a>
-        <a href="https:/github.com/jeffreydyao" target="_blank">
-          <button aria-label="GitHub profile">
-            <Icon name="github-logo" class="w-[15px]" />
-          </button>
-        </a>
-        <a href="https:/twitter.com/jeffdyao" target="_blank">
-          <button aria-label="LinkedIn profile">
-            <Icon name="linkedin-logo" class="w-[15px]" />
-          </button>
-        </a>
-        <a href="https:/twitter.com/jeffdyao" target="_blank">
-          <button aria-label="Email">
-            <Icon name="envelope-closed" class="w-[15px]" />
-          </button>
-        </a>
-      </section>
+      <SocialLinks />
     </header>
 
     <section class="grid grid-flow-row gap-8 md:gap-0 md:grid-flow-col">
