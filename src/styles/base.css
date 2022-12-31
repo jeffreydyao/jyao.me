@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  p,
+  span,
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply text-gray-12;
+  }
+  a {
+    @apply transition-all hover:opacity-50 duration-200 ease-in-out;
+  }
+}

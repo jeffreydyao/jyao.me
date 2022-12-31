@@ -9,7 +9,7 @@ const posts = await Astro.glob("../pages/blog/*.md");
 const publishedPosts = posts.filter((p) => !p.frontmatter.draft);
 ---
 
-<Layout title="Jeffrey Yao">
+<Layout title="Jeffrey Yao" description="Software Engineer at Relevance AI">
   <main class="flex flex-col items-start gap-24 px-8 py-16 md:px-12 md:py-24">
     <header class="flex flex-col gap-8">
       <Image src={profilePhoto} width={144} class="w-[72px] rounded-full" alt="A photo of Jeffrey" />
