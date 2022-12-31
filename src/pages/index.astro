@@ -1,36 +1,84 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import TitleBlock from '../components/TitleBlock.astro';
-import ProjectsCarousel from '../components/ProjectsCarousel.astro';
-import PostsCarousel from '../components/PostsCarousel.astro';
+import { Image } from "@astrojs/image/components";
+import profilePhoto from "../assets/me.jpeg";
+import SocialLinks from "../components/SocialLinks.astro";
+import Layout from "../layouts/Layout.astro";
+
+const posts = await Astro.glob("../pages/blog/*.md");
+const publishedPosts = posts.filter((p) => !p.frontmatter.draft);
 ---
 
-<BaseLayout>
-  <TitleBlock
-    title="Jeffrey Yao"
-    subtitle="First year CS student at UNSW Sydney"
-  >
-    <p class="mb-12 text-gray-12">
-      Building beautiful, performant things that scratch the itch to create and
-      learn.
-    </p>
-  </TitleBlock>
+<Layout title="Jeffrey Yao" description="Software Engineer at Relevance AI" og="home.png" isPost={false}>
+  <main class="flex flex-col items-start gap-16 md:gap-24 px-8 py-16 md:px-12 md:py-24">
+    <header class="flex flex-col gap-8">
+      <Image src={profilePhoto} width={144} class="w-[72px] rounded-full" alt="A photo of Jeffrey" />
+      <section class="flex flex-col gap-4">
+        <h1>Jeffrey Yao</h1>
+        <h2 class="opacity-70">Software Engineer at Relevance AI</h2>
+      </section>
 
-  <h3 class="mb-4 text-xl font-semibold font-display text-gray-12">
-    Recent Posts
-  </h3>
-  <PostsCarousel />
-  <a
-    href="/blog/"
-    class="transition-all text-gray-11 hover:text-green-11 hover:translate-x-16"
-    >Read all posts -></a
-  >
+      <section class="flex flex-col gap-4 leading-relaxed opacity-50">
+        <p>Crafting beautiful + performant software by day, studying Computer Science at UNSW by night.</p>
+        <p>
+          In my spare time I gym, run, explore new places, build side projects and think about where to travel next.
+        </p>
+      </section>
 
-  <h3 class="mt-12 mb-4 text-xl font-semibold font-display text-gray-12">
-    Featured Projects
-  </h3>
-  <ProjectsCarousel />
-  <a href="/projects/" class="transition-all text-gray-11 hover:text-green-11"
-    >See all projects -></a
-  >
-</BaseLayout>
+      <SocialLinks />
+    </header>
+
+    <section class="grid grid-flow-row gap-8 md:gap-0 md:grid-flow-col">
+      <h3 class="w-44">Blog</h3>
+      <div class="grid grid-flow-row gap-8 md:gap-14">
+        {
+          publishedPosts.map((p) => (
+            <div class="grid grid-flow-row gap-2 md:grid-flow-col md:gap-28">
+              <span class="opacity-50 w-28">{p.frontmatter.date}</span>
+              <div class="flex flex-col max-w-md gap-6">
+                <div class="flex flex-col gap-2">
+                  <a href={p.url}>
+                    <h4>{p.frontmatter.title}</h4>
+                  </a>
+                  <p class="opacity-50">{p.frontmatter.description}</p>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="grid grid-flow-row gap-8 md:gap-0 md:grid-flow-col">
+      <h3 class="w-44">Work</h3>
+      <div class="grid grid-flow-row gap-8 md:gap-14">
+        <div class="grid grid-flow-row gap-2 md:grid-flow-col md:gap-28">
+          <span class="opacity-50 w-28">2022 — Now</span>
+          <div class="flex flex-col max-w-md gap-4">
+            <div class="flex flex-col gap-2">
+              <h4>Software Engineer at Relevance AI</h4>
+              <span class="opacity-50">Sydney, Australia</span>
+            </div>
+            <p class="opacity-50">
+              Engineering Relevance AI's front-end and building internal tooling to boost team productivity as we scale
+              from seed-stage to Series A.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-flow-row gap-2 md:grid-flow-col md:gap-28">
+          <span class="opacity-50 w-28">2022 — Now</span>
+          <div class="flex flex-col max-w-md gap-4">
+            <div class="flex flex-col gap-2">
+              <h4>Development Intern at DIJGTAL</h4>
+              <span class="opacity-50">Sydney, Australia</span>
+            </div>
+            <p class="opacity-50">
+              Building a web design system for internal applications in collaboration with UX/UI and providing technical
+              guidance for client projects.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

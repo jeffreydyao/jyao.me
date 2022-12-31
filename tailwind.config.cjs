@@ -1,52 +1,24 @@
-const { fontFamily } = require("tailwindcss/defaultTheme")
+/** @type {import('tailwindcss').Config} */
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
-  content: ["./src/**/*.{astro,html,js,jsx,md,svelte,ts,tsx,vue}"],
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
       fontFamily: {
-        display: ["Inter Display", fontFamily.sans],
-        sans: ["Inter", fontFamily.sans]
+        sans: ["InterVariable", "Inter", ...defaultTheme.fontFamily.sans],
       },
-      typography: theme => ({
+      typography: {
         DEFAULT: {
           css: {
-            color: theme("colors.gray.12"),
-            h1: {
-              fontSize: "1.5rem",
-              fontFamily: "Inter Display",
-              fontWeight: "700",
-              marginTop: "2.15rem"
-            },
-            h2: {
-              fontSize: "1.25rem",
-              fontFamily: "Inter Display",
-              fontWeight: "700"
-            },
-            h3: {
-              fontSize: "1.125rem",
-              fontFamily: "Inter Display",
-              fontWeight: "700"
-            },
-            "code::before": {
-              content: "none"
-            },
-            "code::after": {
-              content: "none"
-            },
-            "--tw-prose-bullets": theme("colors.gray.10"),
-            "--tw-prose-counters": theme("colors.gray.10")
-          }
-        }
-      })
-    }
+            "code::before": false,
+            "code::after": false,
+						"blockquote p:first-of-type::before": false,
+						"blockquote p:first-of-type::after": false
+          },
+        },
+      },
+    },
   },
-  darkmode: "class",
-  plugins: [
-    require("@tailwindcss/typography"),
-    require("@tailwindcss/line-clamp"),
-    require("tailwind-scrollbar-hide"),
-    require("tailwind-hamburgers")
-  ],
-  presets: [require("windy-radix-palette")]
-}
+  plugins: [require("windy-radix-palette"), require("@tailwindcss/typography")],
+};

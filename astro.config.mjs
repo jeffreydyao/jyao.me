@@ -1,24 +1,40 @@
-import { defineConfig } from "astro/config"
-import sitemap from "@astrojs/sitemap"
-import tailwind from "@astrojs/tailwind"
-import solid from "@astrojs/solid-js"
-import { astroImageTools } from "astro-imagetools"
+import { defineConfig } from "astro/config";
+import blulocoTheme from "./src/bluloco-light.json";
+
+// https://astro.build/config
+import tailwind from "@astrojs/tailwind";
+
+// https://astro.build/config
+import image from "@astrojs/image";
+
+// Set default layout for blog posts
+import astroLayouts from "astro-layouts";
+
+const layoutOptions = {
+  "pages/blog/*.md": "/src/layouts/BlogPost.astro",
+};
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://jyao.me",
-  experimental: {
-    integrations: true
+  site: "https://jyao.me/",
+  markdown: {
+    remarkPlugins: [[astroLayouts, layoutOptions]],
+    shikiConfig: {
+      theme: blulocoTheme,
+    },
   },
   integrations: [
-    sitemap(),
     tailwind({
-      // Use custom base.css to apply windy-radix-palette directive
-      config: {
-        applyBaseStyles: false
-      }
+      // https://docs.astro.build/en/guides/integrations-guide/tailwind/#configuring-the-integration
+      // Import custom base.css
+      config: { applyBaseStyles: false },
     }),
-    solid(),
-    astroImageTools
-  ]
-})
+    image(
+      // https://docs.astro.build/en/guides/integrations-guide/image/#installing-sharp-optional
+      // Use sharp for faster builds
+      {
+        serviceEntryPoint: "@astrojs/image/sharp",
+      }
+    ),
+  ],
+});
