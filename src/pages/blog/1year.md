@@ -1,38 +1,40 @@
 ---
 title: Becoming a software engineer in a year
-date: 31/12/2022
+date: 01/01/2023
 description: Reflecting on my journey and advice for those starting out.
 og: 1year.png
 ---
 
-> If you’re more driven than most people, you can do way more than anyone expects ... **[there is] no speed limit**.
->
-> — _Derek Sivers_
-
-Around a year ago, I started learning how to code from scratch and built my [first side project](https://mixtape.jyao.me/). Today, I'm a front-end engineer at [Relevance AI](https://tryrelevance.com), the world's leading analysis and visualization platform for unstructured data.
-
-Reflecting upon my journey, it's been wild, fortunate and I'm truly grateful - in hopes of helping people embarking upon their quest to become a software engineer, here's what I think helped me get here.
+Around a year ago, I started learning how to code and built my [first side project](https://mixtape.jyao.me/). Today, I'm a front-end engineer at [Relevance AI](https://tryrelevance.com). With the hopes of helping those who're starting out, here're some thoughts on what I think helped me get here.
 
 # Build things
 
-Experience trumps all and building things is what got me noticed - from a [climate visualisation app](https://www.unihack.net/events/2022) that took out five awards and second place in an Australian-wide hackathon to a [learning platform](https://github.com/csesoc/learning-platform) for my university's Computer Science society. Instead of watching tutorial videos and attending lectures, I built things to learn, to scratch the itch to make beautiful things, and to make things I wanted. It helped tremendously when interviewing because I could cite specific experience and talk through the implementation details. **Build things for the sake of it and without following templates - the process of learning comes from banging your head against the wall at 2AM trying to get something to work.**
+Experience trumps all and building things is what got me noticed - from a [climate visualisation app](https://greenways.vercel.app) that took out [five awards and second place](https://www.unihack.net/events/2022) in a national hackathon to a [learning platform](https://github.com/csesoc/learning-platform) for my university's Computer Science society. It landed me internships and ultimately my current job. At Relevance, the saying goes that even if you didn't work here, you'd be building things anyway - **a builder mentality will get you noticed**.
+
+There's a difference between following a tutorial versus building something from scratch. The latter builds more experience as you think through implementation details and bang your head against the wall (_the most critical part of learning how to code_). If you have something you want to build, no matter how ambitious it is, go and make it - you'll learn a lot trying to make things work. You'll also have more to talk about when you interview.
+
+**Build what you want to make and build to explore new technologies. Never stop shipping.**
 
 # Seek out opportunities
 
-Stay incredibly curious and stay humble. Talk to people who interest you and ask lots of questions. [Earlywork](https://www.earlywork.co/) is a great resource if you're in Australia - it's how I landed my job at Relevance AI. Do hackathons with friends and seek out internships on LinkedIn and on Twitter. This mentality connected me with so many interesting people.
+**Stay curious, stay humble and stay kind.** Talk to people who interest you and ask lots of questions. Do hackathons with friends if you're at uni and seek out internships ASAP on LinkedIn and [Earlywork](https://www.earlywork.co) if you're in Australia (an incredible resource which helped me land my job at Relevance). **Dive down rabbit holes and say yes to opportunities that come your way.**
 
 # Love what you do
 
-A trend I've noticed is that many people switch into Computer Science for the money but end up disappointed when it's a lot of work. The field is already saturated with junior developers, so you need to stand out by punching above the pack. You can only do this by putting in effort or shining, and you can only do that if you love what you do. Sweat the details, from UX to implementation. Understand your unique advantage (https://drgurner.substack.com/p/obsess-over-the-right-things) and push it.
+A trend I've noticed is that many people switch into Computer Science for the money but end up disappointed when it's a lot of work. The field's already saturated at the entry-level, so you need to stand out by punching above the pack. You can only do this by putting in effort, and you can only do this continuously if you love what you do. **Have passion for your craft.** Sweat the details, from UX to implementation. Generally, **understand your unique edge then push it.**
 
-# Embrace serendipity
+> **Compete where you can win.** Run - don’t think about the fleshy spots - and move with force.
+>
+> — _Dr. Julie Gurner, [You Need To Run Through Walls](https://drgurner.substack.com/p/you-need-to-run-through-walls)_
 
-Say yes to things that come your way.
+# Believe in yourself
 
-The best opportunities along the way ... twitter
+> If you’re more driven than most people, you can do way more than anyone expects ... **[there is] no speed limit**.
+>
+> — _Derek Sivers, [There's No Speed Limit](https://sive.rs/kimo)_
 
-Dive down the rabbit hole and say yes to things. (Winning hackathon, getting an internship).
+Believe in your ability to learn and push through challenges faster than you think. The more you succeed, the more momentum you gain which is a powerful driving force. You can do this - take a deep breath. I believe in you!
 
-# Break free from expectations
+Lastly, none of this would have been possible without the people I've met, the friends I made and the colleagues I learned from (and still do!). Surround yourself with people who support you - the rest will follow.
 
-People think you have to complete a Computer Science degree and do XYZ to become a software engineer. And while it's true that the fundamentals help, I'd like to tell you that that's bullshit. (The only reason you'll get where you are is if you believe in yourself.) Empower yourself to seek out opportunities and build, and you will get noticed.
+_If this helped or you have any questions, I'd love to [hear from you](https://twitter.com/jeffdyao)!_
