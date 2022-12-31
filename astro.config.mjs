@@ -16,6 +16,7 @@ const layoutOptions = {
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://jyao.me/",
   markdown: {
     remarkPlugins: [[astroLayouts, layoutOptions]],
     shikiConfig: {

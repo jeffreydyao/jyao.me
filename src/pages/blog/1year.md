@@ -2,6 +2,7 @@
 title: Becoming a software engineer in a year
 date: 25/12/2022
 description: Reflecting on my journey and advice for those starting out.
+og: 1year.png
 ---
 
 This is normal text. This is normal text. This is normal text. This is normal text.
